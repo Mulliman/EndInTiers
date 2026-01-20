@@ -3,6 +3,7 @@ import { createServer } from 'http';
 import { Server } from 'socket.io';
 import cors from 'cors';
 import { GameState, ServerToClientEvents, ClientToServerEvents, InterServerEvents, SocketData } from './types';
+import { CATEGORIES } from './data';
 
 const app = express();
 app.use(cors());
@@ -99,6 +100,61 @@ io.on('connection', (socket) => {
 
         io.to(roomCode).emit('GAME_UPDATED', game);
         console.log(`Player ${playerName} joined ${roomCode}`);
+    });
+
+    socket.on('START_GAME', () => {
+        const roomCode = socket.data.roomCode;
+        const game = games[roomCode];
+        if (!game) return;
+
+        // Verify host
+        const player = game.players.find(p => p.id === socket.id);
+        if (!player || !player.isHost) {
+             socket.emit('ERROR', 'Only host can start game');
+             return;
+        }
+
+        if (game.status !== 'LOBBY') return;
+
+        // Assign Chooser
+        const randomIdx = Math.floor(Math.random() * game.players.length);
+        game.players.forEach((p, idx) => {
+            p.isChooser = (idx === randomIdx);
+        });
+
+        game.status = 'SELECTING';
+        io.to(roomCode).emit('GAME_UPDATED', game);
+        console.log(`Game ${roomCode} started. Chooser: ${game.players[randomIdx].name}`);
+    });
+
+    socket.on('GET_CATEGORIES', () => {
+        // Send categories to the requesting socket (the chooser)
+        socket.emit('CATEGORIES_SENT', CATEGORIES);
+    });
+
+    socket.on('SET_WORDS', (categoryName, selectedWords) => {
+        const roomCode = socket.data.roomCode;
+        const game = games[roomCode];
+        if (!game) return;
+
+        const player = game.players.find(p => p.id === socket.id);
+        if (!player || !player.isChooser) {
+            socket.emit('ERROR', 'Only chooser can set words');
+            return;
+        }
+
+        if (game.status !== 'SELECTING') return;
+
+        if (selectedWords.length !== 5) {
+            socket.emit('ERROR', 'Must select exactly 5 words');
+            return;
+        }
+
+        game.currentRound.category = categoryName;
+        game.currentRound.words = selectedWords;
+        game.status = 'RANKING';
+
+        io.to(roomCode).emit('GAME_UPDATED', game);
     });
 
     socket.on('disconnect', () => {

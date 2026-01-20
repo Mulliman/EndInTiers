@@ -19,14 +19,24 @@ export interface GameState {
     };
 }
 
+export interface Category {
+    id: string;
+    name: string;
+    words: string[];
+}
+
 export interface ServerToClientEvents {
     GAME_UPDATED: (gameState: GameState) => void;
     ERROR: (message: string) => void;
+    CATEGORIES_SENT: (categories: Category[]) => void;
 }
 
 export interface ClientToServerEvents {
     CREATE_GAME: (playerName: string) => void;
     JOIN_GAME: (roomCode: string, playerName: string) => void;
+    START_GAME: () => void;
+    GET_CATEGORIES: () => void;
+    SET_WORDS: (category: string, words: string[]) => void;
 }
 
 export interface InterServerEvents {

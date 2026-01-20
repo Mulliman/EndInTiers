@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import io, { Socket } from 'socket.io-client';
 import Lobby from '@/components/Lobby';
+import SelectionPhase from '@/components/SelectionPhase';
 import { GameState } from '@/types/game';
 
 let socket: Socket;
@@ -45,8 +46,44 @@ export default function Home() {
         socket.emit('JOIN_GAME', roomCode.toUpperCase(), name);
     };
 
+    const startGame = () => {
+        socket.emit('START_GAME');
+    };
+
     if (gameState && joined) {
-        return <Lobby gameState={gameState} playerId={socket.id || ''} />;
+        const myPlayer = gameState.players.find(p => p.id === socket.id);
+
+        if (gameState.status === 'LOBBY') {
+             return (
+                 <div className="relative">
+                     <Lobby gameState={gameState} playerId={socket.id || ''} />
+                     {myPlayer?.isHost && (
+                         <div className="fixed bottom-8 left-0 right-0 flex justify-center">
+                             <button 
+                                 onClick={startGame}
+                                 className="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-12 rounded-full shadow-lg text-xl transition transform hover:scale-105 active:scale-95"
+                             >
+                                 Start Game
+                             </button>
+                         </div>
+                     )}
+                 </div>
+             );
+        }
+
+        if (gameState.status === 'SELECTING') {
+            const chooser = gameState.players.find(p => p.isChooser);
+            return (
+                <SelectionPhase 
+                    socket={socket} 
+                    isChooser={!!myPlayer?.isChooser} 
+                    chooserName={chooser?.name} 
+                />
+            );
+        }
+        
+        // Placeholder for future states
+        return <div className="text-white text-center mt-20">Game Status: {gameState.status}</div>
     }
 
     return (

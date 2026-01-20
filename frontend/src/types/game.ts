@@ -18,3 +18,9 @@ export interface GameState {
         chooserRankings: Record<string, number>;
     };
 }
+
+export interface Category {
+    id: string;
+    name: string;
+    words: string[];
+}
