@@ -16,6 +16,7 @@ export interface GameState {
         category: string;
         words: string[];
         chooserRankings: Record<string, number>;
+        submissions: Record<string, Record<string, number>>;
     };
 }
 

@@ -51,7 +51,8 @@ io.on('connection', (socket) => {
             currentRound: {
                 category: '',
                 words: [],
-                chooserRankings: {}
+                chooserRankings: {},
+                submissions: {}
             }
         };
 
@@ -153,6 +154,27 @@ io.on('connection', (socket) => {
         game.currentRound.category = categoryName;
         game.currentRound.words = selectedWords;
         game.status = 'RANKING';
+
+        io.to(roomCode).emit('GAME_UPDATED', game);
+    });
+
+    socket.on('SUBMIT_RANKING', (rankings) => {
+        const roomCode = socket.data.roomCode;
+        const game = games[roomCode];
+        if (!game) return;
+
+        if (game.status !== 'RANKING') return;
+
+        // Store submission
+        game.currentRound.submissions[socket.id] = rankings;
+
+        // Check if all players have submitted
+        const totalPlayers = game.players.length;
+        const totalSubmissions = Object.keys(game.currentRound.submissions).length;
+
+        if (totalSubmissions >= totalPlayers) {
+            game.status = 'RESULTS';
+        }
 
         io.to(roomCode).emit('GAME_UPDATED', game);
     });

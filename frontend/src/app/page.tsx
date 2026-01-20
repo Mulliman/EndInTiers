@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import io, { Socket } from 'socket.io-client';
 import Lobby from '@/components/Lobby';
 import SelectionPhase from '@/components/SelectionPhase';
+import RankingPhase from '@/components/RankingPhase';
 import { GameState } from '@/types/game';
 
 let socket: Socket;
@@ -78,6 +79,22 @@ export default function Home() {
                     socket={socket} 
                     isChooser={!!myPlayer?.isChooser} 
                     chooserName={chooser?.name} 
+                />
+            );
+        }
+
+
+        if (gameState.status === 'RANKING') {
+            const hasSubmitted = !!gameState.currentRound.submissions[socket.id];
+            const submissionsCount = Object.keys(gameState.currentRound.submissions).length;
+            
+            return (
+                <RankingPhase 
+                    socket={socket}
+                    words={gameState.currentRound.words}
+                    hasSubmitted={hasSubmitted}
+                    submissionsCount={submissionsCount}
+                    totalPlayers={gameState.players.length}
                 />
             );
         }
