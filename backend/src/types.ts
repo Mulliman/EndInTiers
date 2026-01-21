@@ -18,6 +18,8 @@ export interface GameState {
         chooserRankings: Record<string, number>;
         submissions: Record<string, Record<string, number>>;
     };
+    lastRoundScores?: Record<string, number>;
+    nextChooserId?: string;
 }
 
 export interface Category {
@@ -39,6 +41,7 @@ export interface ClientToServerEvents {
     GET_CATEGORIES: () => void;
     SET_WORDS: (category: string, words: string[]) => void;
     SUBMIT_RANKING: (rankings: Record<string, number>) => void;
+    START_NEXT_ROUND: () => void;
 }
 
 export interface InterServerEvents {

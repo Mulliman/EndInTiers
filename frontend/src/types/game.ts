@@ -18,6 +18,8 @@ export interface GameState {
         chooserRankings: Record<string, number>;
         submissions: Record<string, Record<string, number>>;
     };
+    lastRoundScores?: Record<string, number>;
+    nextChooserId?: string;
 }
 
 export interface Category {

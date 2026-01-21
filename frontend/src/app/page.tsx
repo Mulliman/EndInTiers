@@ -4,6 +4,7 @@ import io, { Socket } from 'socket.io-client';
 import Lobby from '@/components/Lobby';
 import SelectionPhase from '@/components/SelectionPhase';
 import RankingPhase from '@/components/RankingPhase';
+import ResultsPhase from '@/components/ResultsPhase';
 import { GameState } from '@/types/game';
 
 let socket: Socket;
@@ -98,6 +99,16 @@ export default function Home() {
                 />
             );
         }
+
+        if (gameState.status === 'RESULTS') {
+            return (
+                <ResultsPhase 
+                    socket={socket}
+                    gameState={gameState}
+                    playerId={socket.id || ''}
+                />
+            );
+        }
         
         // Placeholder for future states
         return <div className="text-white text-center mt-20">Game Status: {gameState.status}</div>
@@ -106,7 +117,7 @@ export default function Home() {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-950 text-white p-4">
             <h1 className="text-5xl font-bold mb-12 bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text">
-                EndInTiers
+                EndInTiers HOT RELOAD
             </h1>
 
             <div className="bg-gray-900 p-8 rounded-xl shadow-2xl w-full max-w-md border border-gray-800">

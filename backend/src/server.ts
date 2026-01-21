@@ -174,7 +174,78 @@ io.on('connection', (socket) => {
 
         if (totalSubmissions >= totalPlayers) {
             game.status = 'RESULTS';
+            
+            // Calculate Scores
+            const chooser = game.players.find(p => p.isChooser);
+            const chooserSubmissions = chooser ? game.currentRound.submissions[chooser.id] : {};
+            
+            const roundScores: Record<string, number> = {};
+
+            if (chooser && chooserSubmissions) {
+                game.players.forEach(player => {
+                    const playerSubmissions = game.currentRound.submissions[player.id];
+                    if (!playerSubmissions) return;
+
+                    let totalDistance = 0;
+                    Object.entries(game.currentRound.words).forEach(([_, word]) => { // Iterate words array properly
+                         // Actually words is string[], so we iterate that
+                    });
+                     // Fix: words is string[]
+                     game.currentRound.words.forEach(word => {
+                         const chooserRank = chooserSubmissions[word];
+                         const playerRank = playerSubmissions[word];
+                         // Safety check if ranks exist (they should)
+                         if (chooserRank !== undefined && playerRank !== undefined) {
+                             totalDistance += Math.abs(playerRank - chooserRank);
+                         }
+                     });
+
+                     const score = Math.max(0, 100 - (totalDistance * 10));
+                     player.score += score;
+                     roundScores[player.id] = score;
+                });
+            }
+            
+            game.lastRoundScores = roundScores;
+
+            // Determine next chooser
+            const currentChooserIndex = game.players.findIndex(p => p.isChooser);
+            const nextChooserIndex = (currentChooserIndex + 1) % game.players.length;
+            game.nextChooserId = game.players[nextChooserIndex].id;
         }
+
+        io.to(roomCode).emit('GAME_UPDATED', game);
+    });
+
+    socket.on('START_NEXT_ROUND', () => {
+        const roomCode = socket.data.roomCode;
+        const game = games[roomCode];
+        if (!game) return;
+
+        // Verify next chooser is starting it (optional, but good practice)
+        // Or allowing any player to start next round is easier for now, but UI will restrict button.
+        // Let's rely on finding who SHOULD be next.
+        
+        const currentChooserIndex = game.players.findIndex(p => p.isChooser);
+        // Reset current chooser
+        if (currentChooserIndex !== -1) {
+            game.players[currentChooserIndex].isChooser = false;
+        }
+
+        // Set next chooser
+        const nextChooserIndex = (currentChooserIndex + 1) % game.players.length;
+        game.players[nextChooserIndex].isChooser = true;
+
+        // Reset Round Data
+        game.currentRound = {
+            category: '',
+            words: [],
+            chooserRankings: {},
+            submissions: {}
+        };
+        game.lastRoundScores = undefined;
+        game.nextChooserId = undefined;
+        game.status = 'SELECTING';
 
         io.to(roomCode).emit('GAME_UPDATED', game);
     });
