@@ -1,0 +1,27 @@
+{
+    "id": "languages",
+    "name": "Programming Languages",
+    "questions": [
+        "Which language is the most powerful?",
+        "Which language is the most enjoyable to write?"
+    ],
+    "options": [
+        "TypeScript",
+        "JavaScript",
+        "Python",
+        "Java",
+        "C++",
+        "Rust",
+        "Go",
+        "Ruby",
+        "Swift",
+        "Kotlin",
+        "PHP",
+        "C#"
+    ],
+    "tags": [
+        "coding",
+        "tech",
+        "development"
+    ]
+}

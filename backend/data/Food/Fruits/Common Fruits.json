@@ -1,0 +1,27 @@
+{
+    "id": "fruits",
+    "name": "Fruits",
+    "questions": [
+        "Which fruit is the most refreshing?",
+        "What's the best fruit for a snack?"
+    ],
+    "options": [
+        "Apple",
+        "Banana",
+        "Orange",
+        "Strawberry",
+        "Grape",
+        "Watermelon",
+        "Pineapple",
+        "Mango",
+        "Blueberry",
+        "Peach",
+        "Kiwi",
+        "Cherry"
+    ],
+    "tags": [
+        "food",
+        "healthy",
+        "fruit"
+    ]
+}

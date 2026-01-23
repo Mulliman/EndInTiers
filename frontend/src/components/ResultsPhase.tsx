@@ -35,7 +35,12 @@ export default function ResultsPhase({ socket, gameState, playerId }: ResultsPha
     return (
         <div className="flex flex-col items-center min-h-screen bg-gray-900 text-white p-4 pb-20">
             <h1 className="text-4xl font-bold mb-2 text-yellow-400">Round Results</h1>
-            <p className="text-gray-400 mb-8">Category: {currentRound.category}</p>
+            <div className="text-center mb-8">
+                <p className="text-gray-400">Category: {currentRound.category}</p>
+                {currentRound.question && (
+                    <p className="text-xl text-white italic mt-1 font-medium">"{currentRound.question}"</p>
+                )}
+            </div>
 
             {/* Consolidated Results Table */}
             <div className="w-full max-w-4xl bg-gray-800 p-6 rounded-lg shadow-lg mb-8">

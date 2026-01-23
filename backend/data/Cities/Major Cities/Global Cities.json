@@ -1,0 +1,27 @@
+{
+    "id": "cities",
+    "name": "Major Cities",
+    "questions": [
+        "Which city is the best for a holiday?",
+        "Which city has the best atmosphere?"
+    ],
+    "options": [
+        "London",
+        "New York",
+        "Tokyo",
+        "Paris",
+        "Dubai",
+        "Singapore",
+        "Barcelona",
+        "Los Angeles",
+        "Rome",
+        "Istanbul",
+        "Sydney",
+        "Mumbai"
+    ],
+    "tags": [
+        "travel",
+        "world",
+        "cities"
+    ]
+}

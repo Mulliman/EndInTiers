@@ -86,13 +86,14 @@ export default function Home() {
 
 
         if (gameState.status === 'RANKING') {
-            const hasSubmitted = !!gameState.currentRound.submissions[socket.id];
+            const hasSubmitted = socket.id ? !!gameState.currentRound.submissions[socket.id] : false;
             const submissionsCount = Object.keys(gameState.currentRound.submissions).length;
             
             return (
                 <RankingPhase 
                     socket={socket}
                     words={gameState.currentRound.words}
+                    question={gameState.currentRound.question}
                     hasSubmitted={hasSubmitted}
                     submissionsCount={submissionsCount}
                     totalPlayers={gameState.players.length}

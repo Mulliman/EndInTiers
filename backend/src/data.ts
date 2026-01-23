@@ -1,53 +1,63 @@
-export interface Category {
-    id: string;
-    name: string;
-    words: string[];
+import fs from 'fs';
+import path from 'path';
+import { Category, SubCategory, Topic } from './types';
+
+const DATA_DIR = path.join(__dirname, '..', 'data');
+
+export function loadData(): Category[] {
+    const categories: Category[] = [];
+    
+    if (!fs.existsSync(DATA_DIR)) {
+        console.warn(`Data directory not found: ${DATA_DIR}`);
+        return categories;
+    }
+
+    const categoryDirs = fs.readdirSync(DATA_DIR);
+
+    for (const catName of categoryDirs) {
+        const catPath = path.join(DATA_DIR, catName);
+        if (!fs.statSync(catPath).isDirectory()) continue;
+
+        const category: Category = {
+            name: catName,
+            subcategories: []
+        };
+
+        const subCatDirs = fs.readdirSync(catPath);
+        for (const subCatName of subCatDirs) {
+            const subCatPath = path.join(catPath, subCatName);
+            if (!fs.statSync(subCatPath).isDirectory()) continue;
+
+            const subcategory: SubCategory = {
+                name: subCatName,
+                topics: []
+            };
+
+            const topicFiles = fs.readdirSync(subCatPath);
+            for (const topicFile of topicFiles) {
+                if (!topicFile.endsWith('.json')) continue;
+                
+                const topicPath = path.join(subCatPath, topicFile);
+                try {
+                    const content = fs.readFileSync(topicPath, 'utf8');
+                    const topic: Topic = JSON.parse(content);
+                    subcategory.topics.push(topic);
+                } catch (e) {
+                    console.error(`Error loading topic ${topicPath}:`, e);
+                }
+            }
+
+            if (subcategory.topics.length > 0) {
+                category.subcategories.push(subcategory);
+            }
+        }
+
+        if (category.subcategories.length > 0) {
+            categories.push(category);
+        }
+    }
+
+    return categories;
 }
 
-export const CATEGORIES: Category[] = [
-    {
-        id: '90s_pop',
-        name: '90s Pop Music',
-        words: [
-            'Spice Girls', 'Britney Spears', 'Backstreet Boys', "N'Sync", 'Aqua',
-            'Christina Aguilera', 'Hanson', 'TLC', 'Destiny\'s Child', 'Ricky Martin',
-            'Savage Garden', 'Ace of Base'
-        ]
-    },
-    {
-        id: 'fruits',
-        name: 'Fruits',
-        words: [
-            'Apple', 'Banana', 'Orange', 'Strawberry', 'Grape',
-            'Watermelon', 'Pineapple', 'Mango', 'Blueberry', 'Peach',
-            'Kiwi', 'Cherry'
-        ]
-    },
-    {
-        id: 'languages',
-        name: 'Programming Languages',
-        words: [
-            'TypeScript', 'JavaScript', 'Python', 'Java', 'C++',
-            'Rust', 'Go', 'Ruby', 'Swift', 'Kotlin',
-            'PHP', 'C#'
-        ]
-    },
-    {
-        id: 'animals',
-        name: 'Zoo Animals',
-        words: [
-            'Lion', 'Tiger', 'Elephant', 'Giraffe', 'Zebra',
-            'Monkey', 'Penguin', 'Kangaroo', 'Panda', 'Gorilla',
-            'Hippo', 'Rhino'
-        ]
-    },
-    {
-        id: 'cities',
-        name: 'Major Cities',
-        words: [
-            'London', 'New York', 'Tokyo', 'Paris', 'Dubai',
-            'Singapore', 'Barcelona', 'Los Angeles', 'Rome', 'Istanbul',
-            'Sydney', 'Mumbai'
-        ]
-    }
-];
+export const CATEGORIES = loadData();

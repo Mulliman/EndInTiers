@@ -14,6 +14,7 @@ export interface GameState {
     status: GameStatus;
     currentRound: {
         category: string;
+        question?: string;
         words: string[];
         chooserRankings: Record<string, number>;
         submissions: Record<string, Record<string, number>>;
@@ -22,8 +23,20 @@ export interface GameState {
     nextChooserId?: string;
 }
 
-export interface Category {
+export interface Topic {
     id: string;
     name: string;
-    words: string[];
+    questions: string[];
+    options: string[];
+    tags: string[];
+}
+
+export interface SubCategory {
+    name: string;
+    topics: Topic[];
+}
+
+export interface Category {
+    name: string;
+    subcategories: SubCategory[];
 }

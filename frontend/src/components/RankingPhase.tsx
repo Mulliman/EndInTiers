@@ -6,6 +6,7 @@ import { DndContext, DragOverlay, DragStartEvent, DragEndEvent, useDraggable, us
 interface RankingPhaseProps {
     socket: Socket;
     words: string[];
+    question?: string;
     hasSubmitted: boolean;
     submissionsCount: number;
     totalPlayers: number;
@@ -47,7 +48,7 @@ function DroppableTier({ id, children, color }: { id: string, children: React.Re
     );
 }
 
-export default function RankingPhase({ socket, words, hasSubmitted, submissionsCount, totalPlayers }: RankingPhaseProps) {
+export default function RankingPhase({ socket, words, question, hasSubmitted, submissionsCount, totalPlayers }: RankingPhaseProps) {
     const [rankings, setRankings] = useState<Record<string, string>>({}); // word -> tierId
     const [activeId, setActiveId] = useState<string | null>(null);
 
@@ -106,7 +107,9 @@ export default function RankingPhase({ socket, words, hasSubmitted, submissionsC
     return (
         <DndContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
             <div className="min-h-screen bg-gray-900 text-white p-4 pb-24">
-                <h1 className="text-2xl font-bold mb-4 text-center text-blue-400">Rank the Words</h1>
+                <h1 className="text-2xl font-bold mb-4 text-center text-blue-400">
+                    {question || 'Rank the Words'}
+                </h1>
 
                 <div className="max-w-3xl mx-auto space-y-2">
                     {TIERS.map(tier => (

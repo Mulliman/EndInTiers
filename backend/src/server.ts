@@ -133,7 +133,7 @@ io.on('connection', (socket) => {
         socket.emit('CATEGORIES_SENT', CATEGORIES);
     });
 
-    socket.on('SET_WORDS', (categoryName, selectedWords) => {
+    socket.on('SET_WORDS', (categoryName, selectedWords, question) => {
         const roomCode = socket.data.roomCode;
         const game = games[roomCode];
         if (!game) return;
@@ -153,6 +153,7 @@ io.on('connection', (socket) => {
 
         game.currentRound.category = categoryName;
         game.currentRound.words = selectedWords;
+        game.currentRound.question = question;
         game.status = 'RANKING';
 
         io.to(roomCode).emit('GAME_UPDATED', game);

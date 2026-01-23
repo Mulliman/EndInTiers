@@ -14,6 +14,7 @@ export interface GameState {
     status: GameStatus;
     currentRound: {
         category: string;
+        question?: string;
         words: string[];
         chooserRankings: Record<string, number>;
         submissions: Record<string, Record<string, number>>;
@@ -22,10 +23,22 @@ export interface GameState {
     nextChooserId?: string;
 }
 
-export interface Category {
+export interface Topic {
     id: string;
     name: string;
-    words: string[];
+    questions: string[];
+    options: string[];
+    tags: string[];
+}
+
+export interface SubCategory {
+    name: string;
+    topics: Topic[];
+}
+
+export interface Category {
+    name: string;
+    subcategories: SubCategory[];
 }
 
 export interface ServerToClientEvents {
@@ -39,7 +52,7 @@ export interface ClientToServerEvents {
     JOIN_GAME: (roomCode: string, playerName: string) => void;
     START_GAME: () => void;
     GET_CATEGORIES: () => void;
-    SET_WORDS: (category: string, words: string[]) => void;
+    SET_WORDS: (category: string, words: string[], question?: string) => void;
     SUBMIT_RANKING: (rankings: Record<string, number>) => void;
     START_NEXT_ROUND: () => void;
 }
