@@ -1,22 +1,30 @@
-{
-    "id": "pizza_chains",
-    "name": "Pizza Chains",
-    "questions": [
-        "Who offers the ultimate pizza delivery?",
-        "Rank these based on their crust and toppings."
-    ],
-    "options": [
-        "Domino's",
-        "Pizza Hut",
-        "Papa John's",
-        "Little Caesars",
-        "PizzaExpress",
-        "Franco Manca",
-        "Sbarro"
-    ],
-    "tags": [
-        "global",
-        "takeaway",
-        "pizza"
-    ]
-}
+[
+    {
+        "id": "pizza_chains",
+        "name": "Pizza Chains",
+        "questions": [
+            "by preference order",
+            "by the quality of the crust and toppings",
+            "by how much you enjoy their delivery service"
+        ],
+        "options": [
+            "Domino's",
+            "Pizza Hut",
+            "Papa John's",
+            "Little Caesars",
+            "PizzaExpress",
+            "Franco Manca",
+            "Sbarro",
+            "Pizza Hut Delivery",
+            "Independent Pizzeria"
+        ],
+        "tags": [
+            "global",
+            "takeaway",
+            "pizza",
+            "fast food",
+            "delivery",
+            "cheese"
+        ]
+    }
+]

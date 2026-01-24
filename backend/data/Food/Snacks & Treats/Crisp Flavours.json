@@ -1,23 +1,29 @@
-{
-    "id": "uk_crisps",
-    "name": "British Crisp Flavours",
-    "questions": [
-        "Which is the undisputed king of crisp flavours?",
-        "Which flavour is the most controversial?"
-    ],
-    "options": [
-        "Ready Salted",
-        "Cheese & Onion",
-        "Salt & Vinegar",
-        "Prawn Cocktail",
-        "Beef & Onion",
-        "Smoky Bacon",
-        "Roast Chicken",
-        "Pickled Onion"
-    ],
-    "tags": [
-        "uk",
-        "snacks",
-        "crisps"
-    ]
-}
+[
+    {
+        "id": "british_crisp_flavours",
+        "name": "British Crisp Flavours",
+        "questions": [
+            "by preference order",
+            "by how much they satisfy a snack craving",
+            "by how well they pair with a sandwich"
+        ],
+        "options": [
+            "Ready Salted",
+            "Cheese & Onion",
+            "Salt & Vinegar",
+            "Prawn Cocktail",
+            "Beef & Onion",
+            "Smoky Bacon",
+            "Roast Chicken",
+            "Pickled Onion"
+        ],
+        "tags": [
+            "uk",
+            "snacks",
+            "crisps",
+            "british",
+            "potato chips",
+            "lunchbox"
+        ]
+    }
+]

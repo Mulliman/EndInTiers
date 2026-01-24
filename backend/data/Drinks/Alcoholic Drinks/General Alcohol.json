@@ -1,0 +1,85 @@
+[
+    {
+        "id": "alcohol_categories",
+        "name": "Alcoholic Drink Categories",
+        "questions": [
+            "by preference order",
+            "by level of sophistication",
+            "by how much you enjoy them at an evening celebration"
+        ],
+        "options": [
+            "Beer (Lager/Ale)",
+            "Wine",
+            "Spirits",
+            "Cider",
+            "Cocktails",
+            "Sparkling Wine / Champagne",
+            "Alcopops",
+            "Liqueurs"
+        ],
+        "tags": [
+            "alcohol",
+            "drinks",
+            "party",
+            "social",
+            "uk",
+            "drinks cabinet"
+        ]
+    },
+    {
+        "id": "wine_varieties",
+        "name": "Wine Varieties",
+        "questions": [
+            "by preference order",
+            "by how much they feel like a luxury",
+            "by how well they pair with a good meal"
+        ],
+        "options": [
+            "Red Wine",
+            "White Wine (Dry)",
+            "White Wine (Sweet)",
+            "Rosé Wine",
+            "Prosecco",
+            "Champagne",
+            "Port",
+            "Sherry",
+            "Dessert Wine"
+        ],
+        "tags": [
+            "wine",
+            "alcohol",
+            "sophisticated",
+            "dinner",
+            "party",
+            "grapes"
+        ]
+    },
+    {
+        "id": "pub_drink_orders",
+        "name": "Standard Pub Orders",
+        "questions": [
+            "by how often you would order them as your first drink",
+            "by preference order",
+            "by how much you enjoy them in a beer garden"
+        ],
+        "options": [
+            "Pint of Lager",
+            "Pint of Ale / Bitter",
+            "Pint of Cider",
+            "Gin & Tonic",
+            "Large Glass of Wine",
+            "Vodka & Mixer",
+            "Whiskey / Scotch",
+            "Glass of Prosecco",
+            "Guinness"
+        ],
+        "tags": [
+            "pub",
+            "uk",
+            "drinking",
+            "social",
+            "night out",
+            "bar"
+        ]
+    }
+]

@@ -3,8 +3,9 @@
         "id": "japanese_cuisine",
         "name": "Japanese Cuisine",
         "questions": [
-            "What is the highlight of Japanese food for you?",
-            "Rank these from most to least delicious."
+            "by preference order",
+            "by how much you enjoy them as a highlight of Japanese food",
+            "by flavour intensity"
         ],
         "options": [
             "Sushi",
@@ -19,15 +20,18 @@
         "tags": [
             "japan",
             "asia",
-            "global"
+            "global",
+            "dinner",
+            "traditional",
+            "oriental"
         ]
     },
     {
         "id": "sushi_types",
         "name": "Types of Sushi",
         "questions": [
-            "What's your go-to sushi choice?",
-            "Rank these sushi varieties by preference."
+            "by preference order",
+            "by how often they are your go-to choice"
         ],
         "options": [
             "Nigiri",
@@ -42,7 +46,10 @@
         "tags": [
             "sushi",
             "japan",
-            "seafood"
+            "seafood",
+            "fish",
+            "dinner",
+            "traditional"
         ]
     }
 ]

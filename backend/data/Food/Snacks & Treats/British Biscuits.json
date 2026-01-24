@@ -3,8 +3,9 @@
         "id": "british_biscuits",
         "name": "Classic British Biscuits",
         "questions": [
-            "Which biscuit is the ultimate tea-dunker?",
-            "Rank these biscuits for a rainy afternoon."
+            "by preference order",
+            "by their ability to dunk in tea",
+            "by how much they suit a rainy afternoon"
         ],
         "options": [
             "Digestive (Plain)",
@@ -21,15 +22,19 @@
             "uk",
             "treats",
             "biscuits",
-            "tea"
+            "tea",
+            "british",
+            "sweet",
+            "snacks"
         ]
     },
     {
         "id": "chocolate_bars_uk",
         "name": "British Chocolate Bars",
         "questions": [
-            "What's the best chocolate bar for a sugar crash?",
-            "Rank these corner shop classics."
+            "by preference order",
+            "by how much they help with a sugar crash",
+            "by how much they are a corner shop classic"
         ],
         "options": [
             "Dairy Milk",
@@ -47,7 +52,10 @@
             "uk",
             "chocolate",
             "corner shop",
-            "snacks"
+            "snacks",
+            "british",
+            "sweet",
+            "treats"
         ]
     }
 ]

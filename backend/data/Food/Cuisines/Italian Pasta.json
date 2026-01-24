@@ -3,8 +3,9 @@
         "id": "italian_pasta_dishes",
         "name": "Italian Pasta Dishes",
         "questions": [
-            "Which pasta dish is the ultimate comfort food?",
-            "Rank these Italian classics."
+            "by preference order",
+            "by how much they feel like the ultimate comfort food",
+            "by how much you enjoy them at a restaurant"
         ],
         "options": [
             "Carbonara",
@@ -20,15 +21,19 @@
             "italy",
             "europe",
             "pasta",
-            "dinner"
+            "dinner",
+            "traditional",
+            "cooking",
+            "comfort food"
         ]
     },
     {
         "id": "pasta_shapes",
         "name": "Pasta Shapes",
         "questions": [
-            "Which pasta shape holds sauce the best?",
-            "Rank these shapes by how much you enjoy eating them."
+            "by preference order",
+            "by how fun they look",
+            "by how much you enjoy eating them"
         ],
         "options": [
             "Penne",
@@ -45,7 +50,9 @@
             "pasta",
             "italy",
             "shapes",
-            "cooking"
+            "cooking",
+            "dinner",
+            "traditional"
         ]
     }
 ]

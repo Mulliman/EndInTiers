@@ -1,23 +1,29 @@
-{
-    "id": "mexican_food",
-    "name": "Mexican Cuisine",
-    "questions": [
-        "What is the best way to eat Mexican food?",
-        "Which of these is the most satisfying?"
-    ],
-    "options": [
-        "Tacos",
-        "Burritos",
-        "Enchiladas",
-        "Quesadillas",
-        "Guacamole & Chips",
-        "Chilaquiles",
-        "Tamales",
-        "Elote"
-    ],
-    "tags": [
-        "mexico",
-        "global",
-        "spicy"
-    ]
-}
+[
+    {
+        "id": "mexican_cuisine",
+        "name": "Mexican Cuisine",
+        "questions": [
+            "by preference order",
+            "by how satisfying they are to eat",
+            "by which is the best for a quick lunch"
+        ],
+        "options": [
+            "Tacos",
+            "Burritos",
+            "Enchiladas",
+            "Quesadillas",
+            "Guacamole & Chips",
+            "Chilaquiles",
+            "Tamales",
+            "Elote"
+        ],
+        "tags": [
+            "mexico",
+            "global",
+            "spicy",
+            "latin america",
+            "dinner",
+            "tacos"
+        ]
+    }
+]

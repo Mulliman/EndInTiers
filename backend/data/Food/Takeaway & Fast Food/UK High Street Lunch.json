@@ -1,24 +1,31 @@
-{
-    "id": "uk_high_street",
-    "name": "UK High Street Lunch",
-    "questions": [
-        "Where are you heading for a quick lunch?",
-        "Who has the best Meal Deal?"
-    ],
-    "options": [
-        "Greggs",
-        "Pret A Manger",
-        "Tesco (Meal Deal)",
-        "Sainsbury's (Meal Deal)",
-        "Leon",
-        "Itsu",
-        "Wasabi",
-        "M&S Foodhall"
-    ],
-    "tags": [
-        "uk",
-        "lunch",
-        "high street",
-        "greggs"
-    ]
-}
+[
+    {
+        "id": "uk_high_street_lunch",
+        "name": "UK High Street Lunch",
+        "questions": [
+            "by preference order",
+            "by the quality of their meal deal",
+            "by how often you visit them for a quick lunch"
+        ],
+        "options": [
+            "Greggs",
+            "Pret A Manger",
+            "Tesco (Meal Deal)",
+            "Sainsbury's (Meal Deal)",
+            "Leon",
+            "Itsu",
+            "Wasabi",
+            "M&S Foodhall",
+            "Subway",
+            "Costa Coffee"
+        ],
+        "tags": [
+            "uk",
+            "lunch",
+            "high street",
+            "greggs",
+            "sandwich",
+            "fast food"
+        ]
+    }
+]

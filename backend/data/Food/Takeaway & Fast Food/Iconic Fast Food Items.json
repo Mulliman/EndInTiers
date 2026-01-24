@@ -1,24 +1,29 @@
-{
-    "id": "american_fast_food_items",
-    "name": "Iconic American Fast Food",
-    "questions": [
-        "Which of these is the most iconic fast food item?",
-        "If you were stranded on an island, which would you crave first?"
-    ],
-    "options": [
-        "Big Mac (McDonald's)",
-        "Whopper (Burger King)",
-        "Famous Bowl (KFC)",
-        "Baconator (Wendy's)",
-        "Double-Double (In-N-Out)",
-        "Orange Chicken (Panda Express)",
-        "Crunchwrap Supreme (Taco Bell)",
-        "Spicy Chicken Sandwich (Popeyes)"
-    ],
-    "tags": [
-        "usa",
-        "fast food",
-        "global",
-        "mcdonalds"
-    ]
-}
+[
+    {
+        "id": "iconic_fast_food_items",
+        "name": "Iconic Fast Food Items",
+        "questions": [
+            "by preference order",
+            "by how much you crave them",
+            "by how iconic they are globally"
+        ],
+        "options": [
+            "Big Mac (McDonald's)",
+            "Whopper (Burger King)",
+            "Famous Bowl (KFC)",
+            "Baconator (Wendy's)",
+            "Double-Double (In-N-Out)",
+            "Orange Chicken (Panda Express)",
+            "Crunchwrap Supreme (Taco Bell)",
+            "Spicy Chicken Sandwich (Popeyes)"
+        ],
+        "tags": [
+            "usa",
+            "fast food",
+            "global",
+            "mcdonalds",
+            "burgers",
+            "junk food"
+        ]
+    }
+]

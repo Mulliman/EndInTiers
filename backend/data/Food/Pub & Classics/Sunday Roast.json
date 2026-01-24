@@ -1,26 +1,32 @@
-{
-    "id": "sunday_roast",
-    "name": "Sunday Roast Components",
-    "questions": [
-        "Which part of a Sunday Roast is the most essential?",
-        "Rank these roast components from best to worst."
-    ],
-    "options": [
-        "Roast Potatoes",
-        "Mashed Potatoes",
-        "Yorkshire Pudding",
-        "Gravy",
-        "Meat",
-        "Stuffing",
-        "Carrots",
-        "Parsnips",
-        "Cauliflower Cheese",
-        "Pigs in Blankets"
-    ],
-    "tags": [
-        "uk",
-        "british",
-        "dinner",
-        "traditional"
-    ]
-}
+[
+    {
+        "id": "sunday_roast_components",
+        "name": "Sunday Roast Components",
+        "questions": [
+            "by preference order",
+            "by how essential they are for a perfect roast",
+            "by how well they pair with gravy"
+        ],
+        "options": [
+            "Roast Potatoes",
+            "Mashed Potatoes",
+            "Yorkshire Pudding",
+            "Gravy",
+            "Meat",
+            "Stuffing",
+            "Carrots",
+            "Parsnips",
+            "Cauliflower Cheese",
+            "Pigs in Blankets"
+        ],
+        "tags": [
+            "uk",
+            "british",
+            "dinner",
+            "traditional",
+            "roast",
+            "sunday",
+            "gravy"
+        ]
+    }
+]

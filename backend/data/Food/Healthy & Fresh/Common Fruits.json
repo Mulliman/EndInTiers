@@ -1,27 +1,33 @@
-{
-    "id": "fruits",
-    "name": "Fruits",
-    "questions": [
-        "Which fruit is the most refreshing?",
-        "What's the best fruit for a snack?"
-    ],
-    "options": [
-        "Apple",
-        "Banana",
-        "Orange",
-        "Strawberry",
-        "Grape",
-        "Watermelon",
-        "Pineapple",
-        "Mango",
-        "Blueberry",
-        "Peach",
-        "Kiwi",
-        "Cherry"
-    ],
-    "tags": [
-        "food",
-        "healthy",
-        "fruit"
-    ]
-}
+[
+    {
+        "id": "common_fruits",
+        "name": "Common Fruits",
+        "questions": [
+            "by preference order",
+            "by how refreshing they are",
+            "by how good they are as a healthy snack"
+        ],
+        "options": [
+            "Apple",
+            "Banana",
+            "Orange",
+            "Strawberry",
+            "Grape",
+            "Watermelon",
+            "Pineapple",
+            "Mango",
+            "Blueberry",
+            "Peach",
+            "Kiwi",
+            "Cherry"
+        ],
+        "tags": [
+            "food",
+            "healthy",
+            "fruit",
+            "nature",
+            "fresh",
+            "sweet"
+        ]
+    }
+]

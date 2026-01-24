@@ -1,27 +1,33 @@
-{
-    "id": "cities",
-    "name": "Major Cities",
-    "questions": [
-        "Which city is the best for a holiday?",
-        "Which city has the best atmosphere?"
-    ],
-    "options": [
-        "London",
-        "New York",
-        "Tokyo",
-        "Paris",
-        "Dubai",
-        "Singapore",
-        "Barcelona",
-        "Los Angeles",
-        "Rome",
-        "Istanbul",
-        "Sydney",
-        "Mumbai"
-    ],
-    "tags": [
-        "travel",
-        "world",
-        "cities"
-    ]
-}
+[
+    {
+        "id": "major_cities",
+        "name": "Major Cities",
+        "questions": [
+            "by preference order",
+            "by how much you want to visit them for a holiday",
+            "by how good the atmosphere is"
+        ],
+        "options": [
+            "London",
+            "New York",
+            "Tokyo",
+            "Paris",
+            "Dubai",
+            "Singapore",
+            "Barcelona",
+            "Los Angeles",
+            "Rome",
+            "Istanbul",
+            "Sydney",
+            "Mumbai"
+        ],
+        "tags": [
+            "travel",
+            "world",
+            "cities",
+            "tourism",
+            "global",
+            "destinations"
+        ]
+    }
+]

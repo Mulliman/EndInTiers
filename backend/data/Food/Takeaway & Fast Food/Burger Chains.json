@@ -3,8 +3,9 @@
         "id": "burger_chains",
         "name": "Global Burger Chains",
         "questions": [
-            "Which chain makes the best burger?",
-            "Rank these fast food giants."
+            "by preference order",
+            "by the quality of the burgers",
+            "by how much they represent a fast food giant"
         ],
         "options": [
             "McDonald's",
@@ -20,15 +21,19 @@
             "global",
             "fast food",
             "burger",
-            "usa"
+            "usa",
+            "takeaway",
+            "brand",
+            "dinner"
         ]
     },
     {
         "id": "chicken_burger_chains",
         "name": "Chicken Burger Specialists",
         "questions": [
-            "Who has the best chicken burger/sandwich?",
-            "Rank these poultry specialists."
+            "by preference order",
+            "by the quality of the chicken",
+            "by how much you enjoy their side dishes"
         ],
         "options": [
             "KFC",
@@ -44,7 +49,10 @@
             "chicken",
             "fast food",
             "global",
-            "takeaway"
+            "takeaway",
+            "brand",
+            "dinner",
+            "poultry"
         ]
     }
 ]

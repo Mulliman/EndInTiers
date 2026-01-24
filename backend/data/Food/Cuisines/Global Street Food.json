@@ -1,24 +1,30 @@
-{
-    "id": "global_street_food",
-    "name": "Global Street Food",
-    "questions": [
-        "Which street food would you travel for?",
-        "Rank these based on the mess-to-reward ratio."
-    ],
-    "options": [
-        "Poutine (Canada)",
-        "Banh Mi (Vietnam)",
-        "Falafel (Middle East)",
-        "Hot Dogs (USA/NYC)",
-        "Pretzel (Germany)",
-        "Taiyaki (Japan)",
-        "Arepas (Venezuela/Colombia)",
-        "Falafel Wrapper (Middle East)",
-        "Jerky Chicken (Jamaica)"
-    ],
-    "tags": [
-        "global",
-        "street food",
-        "travel"
-    ]
-}
+[
+    {
+        "id": "global_street_food",
+        "name": "Global Street Food",
+        "questions": [
+            "by preference order",
+            "by how much you would travel to eat them",
+            "by the reward they give compared to the mess"
+        ],
+        "options": [
+            "Poutine (Canada)",
+            "Banh Mi (Vietnam)",
+            "Falafel (Middle East)",
+            "Hot Dogs (USA/NYC)",
+            "Pretzel (Germany)",
+            "Taiyaki (Japan)",
+            "Arepas (Venezuela/Colombia)",
+            "Falafel Wrapper (Middle East)",
+            "Jerky Chicken (Jamaica)"
+        ],
+        "tags": [
+            "global",
+            "street food",
+            "travel",
+            "food",
+            "snack",
+            "world cuisine"
+        ]
+    }
+]

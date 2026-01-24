@@ -1,27 +1,34 @@
-{
-    "id": "90s_pop",
-    "name": "90s Pop Music",
-    "questions": [
-        "Who is the ultimate 90s pop star?",
-        "Which group defined the 90s for you?"
-    ],
-    "options": [
-        "Spice Girls",
-        "Britney Spears",
-        "Backstreet Boys",
-        "N'Sync",
-        "Aqua",
-        "Christina Aguilera",
-        "Hanson",
-        "TLC",
-        "Destiny's Child",
-        "Ricky Martin",
-        "Savage Garden",
-        "Ace of Base"
-    ],
-    "tags": [
-        "90s",
-        "music",
-        "pop"
-    ]
-}
+[
+    {
+        "id": "90s_pop_music",
+        "name": "90s Pop Music",
+        "questions": [
+            "by preference order",
+            "by who the ultimate 90s pop star is",
+            "by who best defines the 90s era"
+        ],
+        "options": [
+            "Spice Girls",
+            "Britney Spears",
+            "Backstreet Boys",
+            "N'Sync",
+            "Aqua",
+            "Christina Aguilera",
+            "Hanson",
+            "TLC",
+            "Destiny's Child",
+            "Ricky Martin",
+            "Savage Garden",
+            "Ace of Base"
+        ],
+        "tags": [
+            "90s",
+            "music",
+            "pop",
+            "nostalgia",
+            "hits",
+            "boy bands",
+            "girl groups"
+        ]
+    }
+]
