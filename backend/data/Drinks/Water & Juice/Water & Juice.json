@@ -1,0 +1,57 @@
+[
+    {
+        "id": "bottled_water",
+        "name": "Bottled Water Brands",
+        "questions": [
+            "by preference order",
+            "by the quality of the water",
+            "by the design and feel of the bottle"
+        ],
+        "options": [
+            "Evian",
+            "Volvic",
+            "Buxton",
+            "Highland Spring",
+            "SmartWater",
+            "Fiji",
+            "Vittel",
+            "San Pellegrino (Sparkling)",
+            "Perrier (Sparkling)"
+        ],
+        "tags": [
+            "water",
+            "hydration",
+            "brands",
+            "healthy",
+            "refreshing",
+            "uk"
+        ]
+    },
+    {
+        "id": "fruit_juices",
+        "name": "Fruit Juices",
+        "questions": [
+            "by preference order",
+            "by how well they go with breakfast",
+            "by how refreshing they are"
+        ],
+        "options": [
+            "Orange (With bits)",
+            "Orange (Smooth)",
+            "Apple",
+            "Pineapple",
+            "Grapefruit",
+            "Cranberry",
+            "Mango",
+            "Pomegranate",
+            "Tropical Mix"
+        ],
+        "tags": [
+            "juice",
+            "fruit",
+            "breakfast",
+            "healthy",
+            "vitamin c"
+        ]
+    }
+]

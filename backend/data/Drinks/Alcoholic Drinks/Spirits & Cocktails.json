@@ -1,0 +1,57 @@
+[
+    {
+        "id": "spirits",
+        "name": "Common Spirits",
+        "questions": [
+            "by preference order",
+            "by versatility as a mixer",
+            "by how much you enjoy them in a cocktail"
+        ],
+        "options": [
+            "Vodka",
+            "Gin",
+            "Rum (White)",
+            "Rum (Spiced)",
+            "Whiskey / Bourbon",
+            "Tequila",
+            "Brandy",
+            "Baileys"
+        ],
+        "tags": [
+            "spirits",
+            "alcohol",
+            "party",
+            "drinking",
+            "mixers"
+        ]
+    },
+    {
+        "id": "classic_cocktails",
+        "name": "Classic Cocktails",
+        "questions": [
+            "by preference order",
+            "by how sophisticated they feel",
+            "by which is the best for a night out"
+        ],
+        "options": [
+            "Margarita",
+            "Espresso Martini",
+            "Pornstar Martini",
+            "Mojito",
+            "Old Fashioned",
+            "Negroni",
+            "Cosmopolitan",
+            "Aperol Spritz",
+            "Piña Colada",
+            "Daiquiri"
+        ],
+        "tags": [
+            "cocktails",
+            "bar",
+            "night out",
+            "alcohol",
+            "fancy",
+            "modern"
+        ]
+    }
+]

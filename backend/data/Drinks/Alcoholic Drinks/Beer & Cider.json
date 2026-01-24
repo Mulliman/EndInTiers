@@ -1,0 +1,58 @@
+[
+    {
+        "id": "draught_pints",
+        "name": "Classic Draught Pints",
+        "questions": [
+            "by preference order",
+            "by how much you enjoy them at a pub",
+            "by which is the most reliable pint"
+        ],
+        "options": [
+            "Guinness",
+            "Stella Artois",
+            "Carling",
+            "Foster's",
+            "Peroni",
+            "San Miguel",
+            "Birra Moretti",
+            "Heineken",
+            "Amstel",
+            "Doom Bar (Ale)"
+        ],
+        "tags": [
+            "beer",
+            "lager",
+            "ale",
+            "pub",
+            "uk",
+            "alcohol"
+        ]
+    },
+    {
+        "id": "cider_brands",
+        "name": "Popular Cider Brands",
+        "questions": [
+            "by preference order",
+            "by how refreshing they are as a summer drink",
+            "by which has the best flavour profile"
+        ],
+        "options": [
+            "Strongbow",
+            "Magners",
+            "Bulmers",
+            "Thatchers Gold",
+            "Old Mout",
+            "Kopparberg",
+            "Somersby",
+            "Henry Westons"
+        ],
+        "tags": [
+            "cider",
+            "alcohol",
+            "uk",
+            "summer",
+            "fruit",
+            "pub"
+        ]
+    }
+]

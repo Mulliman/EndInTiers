@@ -1,0 +1,88 @@
+[
+    {
+        "id": "fizzy_drinks",
+        "name": "Fizzy Drinks",
+        "questions": [
+            "by preference order",
+            "by how refreshing they are on a hot day",
+            "by how well they go with a meal"
+        ],
+        "options": [
+            "Coca-Cola",
+            "Diet Coke",
+            "Pepsi",
+            "7-Up",
+            "Sprite",
+            "Fanta Orange",
+            "Dr Pepper",
+            "Lilt",
+            "Irn-Bru",
+            "Vimto"
+        ],
+        "tags": [
+            "soda",
+            "fizzy",
+            "soft drinks",
+            "sugar",
+            "refreshing",
+            "uk"
+        ]
+    },
+    {
+        "id": "british_squash_flavours",
+        "name": "British Squash Flavours",
+        "questions": [
+            "by preference order",
+            "by how often you drink them at home",
+            "by which is the most classic flavour"
+        ],
+        "options": [
+            "Orange",
+            "Apple & Blackcurrant",
+            "Summer Fruits",
+            "Lemon",
+            "Peach",
+            "Tropical",
+            "Blackcurrant",
+            "Elderflower"
+        ],
+        "tags": [
+            "squash",
+            "cordial",
+            "uk",
+            "soft drinks",
+            "fruit",
+            "robinsons"
+        ]
+    },
+    {
+        "id": "cola_variations",
+        "name": "Cola Variations",
+        "questions": [
+            "by preference order",
+            "by which has the best flavour balance",
+            "by how often you pick them at a shop"
+        ],
+        "options": [
+            "Coca-Cola Classic",
+            "Diet Coke",
+            "Coca-Cola Zero Sugar",
+            "Pepsi",
+            "Pepsi Max",
+            "Diet Pepsi",
+            "Cherry Coke",
+            "Vanilla Coke",
+            "Pepsi Max Cherry",
+            "Coca-Cola Zero Sugar Cherry"
+        ],
+        "tags": [
+            "cola",
+            "soda",
+            "fizzy",
+            "coke",
+            "pepsi",
+            "soft drinks",
+            "uk"
+        ]
+    }
+]
