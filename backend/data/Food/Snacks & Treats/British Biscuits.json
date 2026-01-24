@@ -1,0 +1,25 @@
+{
+    "id": "british_biscuits",
+    "name": "Classic British Biscuits",
+    "questions": [
+        "Which biscuit is the ultimate tea-dunker?",
+        "Rank these biscuits for a rainy afternoon."
+    ],
+    "options": [
+        "Digestive (Plain)",
+        "Chocolate Digestive",
+        "Custard Cream",
+        "Bourbon",
+        "Hobnob",
+        "Jammie Dodger",
+        "Rich Tea",
+        "Shortbread",
+        "Ginger Nut"
+    ],
+    "tags": [
+        "uk",
+        "treats",
+        "biscuits",
+        "tea"
+    ]
+}

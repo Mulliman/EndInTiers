@@ -1,0 +1,23 @@
+{
+    "id": "mexican_food",
+    "name": "Mexican Cuisine",
+    "questions": [
+        "What is the best way to eat Mexican food?",
+        "Which of these is the most satisfying?"
+    ],
+    "options": [
+        "Tacos",
+        "Burritos",
+        "Enchiladas",
+        "Quesadillas",
+        "Guacamole & Chips",
+        "Chilaquiles",
+        "Tamales",
+        "Elote"
+    ],
+    "tags": [
+        "mexico",
+        "global",
+        "spicy"
+    ]
+}

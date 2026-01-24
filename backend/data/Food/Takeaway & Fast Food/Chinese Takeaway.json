@@ -1,0 +1,23 @@
+{
+    "id": "chinese_takeaway",
+    "name": "Chinese Takeaway (UK Style)",
+    "questions": [
+        "Which dish defines a Friday night Chinese?",
+        "If you could only pick one main, what would it be?"
+    ],
+    "options": [
+        "Sweet and Sour Chicken",
+        "Beef in Black Bean Sauce",
+        "Special Fried Rice",
+        "Crispy Chilli Beef",
+        "Chow Mein",
+        "Spring Rolls",
+        "Prawn Toast",
+        "Duck Pancakes"
+    ],
+    "tags": [
+        "uk",
+        "takeaway",
+        "chinese"
+    ]
+}

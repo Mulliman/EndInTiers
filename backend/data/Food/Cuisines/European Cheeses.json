@@ -1,0 +1,24 @@
+{
+    "id": "european_cheeses",
+    "name": "European Cheeses",
+    "questions": [
+        "Which cheese belongs on every cheeseboard?",
+        "Rank these based on flavour and texture."
+    ],
+    "options": [
+        "Cheddar (UK)",
+        "Brie (France)",
+        "Parmigiano-Reggiano (Italy)",
+        "Gouda (Netherlands)",
+        "Manchego (Spain)",
+        "Feta (Greece)",
+        "Roquefort (France)",
+        "Emmental (Switzerland)",
+        "Stilton (UK)"
+    ],
+    "tags": [
+        "europe",
+        "cheese",
+        "dairy"
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "id": "essential_condiments",
+    "name": "Essential Condiments",
+    "questions": [
+        "Which sauce is the most versatile?",
+        "Which one could you not live without?"
+    ],
+    "options": [
+        "Ketchup",
+        "Mayonnaise",
+        "Heinz Salad Cream",
+        "Brown Sauce (HP)",
+        "Yellow Mustard",
+        "Sriracha",
+        "Soy Sauce",
+        "Bbq Sauce",
+        "Sweet Chilli Sauce"
+    ],
+    "tags": [
+        "global",
+        "uk",
+        "sauce"
+    ]
+}

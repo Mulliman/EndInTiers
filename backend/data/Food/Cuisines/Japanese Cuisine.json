@@ -1,0 +1,23 @@
+{
+    "id": "japanese_cuisine",
+    "name": "Japanese Cuisine",
+    "questions": [
+        "What is the highlight of Japanese food for you?",
+        "Rank these from most to least delicious."
+    ],
+    "options": [
+        "Sushi",
+        "Ramen",
+        "Tempura",
+        "Teriyaki Chicken",
+        "Gyoza",
+        "Udon",
+        "Donburi",
+        "Miso Soup"
+    ],
+    "tags": [
+        "japan",
+        "asia",
+        "global"
+    ]
+}

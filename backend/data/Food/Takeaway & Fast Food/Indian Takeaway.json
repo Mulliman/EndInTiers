@@ -1,0 +1,26 @@
+{
+    "id": "indian_takeaway",
+    "name": "Indian Takeaway (UK Style)",
+    "questions": [
+        "What's your go-to curry choice?",
+        "Which side dish is non-negotiable?"
+    ],
+    "options": [
+        "Chicken Tikka Masala",
+        "Lamb Jalfrezi",
+        "Beef Madras",
+        "Vindaloo",
+        "Korma",
+        "Peshwari Naan",
+        "Garlic Naan",
+        "Poppadoms & Chutney",
+        "Onion Bhaji",
+        "Chicken Pakora"
+    ],
+    "tags": [
+        "uk",
+        "takeaway",
+        "indian",
+        "curry"
+    ]
+}

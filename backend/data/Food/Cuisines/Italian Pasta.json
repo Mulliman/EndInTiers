@@ -1,0 +1,24 @@
+{
+    "id": "italian_pasta",
+    "name": "Italian Pasta Dishes",
+    "questions": [
+        "Which pasta dish is the ultimate comfort food?",
+        "Rank these Italian classics."
+    ],
+    "options": [
+        "Carbonara",
+        "Lasagne",
+        "Spaghetti Bolognese",
+        "Pesto alla Genovese",
+        "Cacio e Pepe",
+        "Amatriciana",
+        "Ravioli",
+        "Spaghetti alle vongole"
+    ],
+    "tags": [
+        "italy",
+        "europe",
+        "pasta",
+        "dinner"
+    ]
+}
