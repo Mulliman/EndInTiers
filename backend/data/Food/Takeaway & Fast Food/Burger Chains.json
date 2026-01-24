@@ -1,24 +1,50 @@
-{
-    "id": "burger_chains",
-    "name": "Global Burger Chains",
-    "questions": [
-        "Which chain makes the best burger?",
-        "Rank these fast food giants."
-    ],
-    "options": [
-        "McDonald's",
-        "Burger King",
-        "Five Guys",
-        "Wendy's",
-        "Shake Shack",
-        "In-N-Out Burger",
-        "Carl's Jr.",
-        "A&W"
-    ],
-    "tags": [
-        "global",
-        "fast food",
-        "burger",
-        "usa"
-    ]
-}
+[
+    {
+        "id": "burger_chains",
+        "name": "Global Burger Chains",
+        "questions": [
+            "Which chain makes the best burger?",
+            "Rank these fast food giants."
+        ],
+        "options": [
+            "McDonald's",
+            "Burger King",
+            "Five Guys",
+            "Wendy's",
+            "Shake Shack",
+            "In-N-Out Burger",
+            "Carl's Jr.",
+            "A&W"
+        ],
+        "tags": [
+            "global",
+            "fast food",
+            "burger",
+            "usa"
+        ]
+    },
+    {
+        "id": "chicken_burger_chains",
+        "name": "Chicken Burger Specialists",
+        "questions": [
+            "Who has the best chicken burger/sandwich?",
+            "Rank these poultry specialists."
+        ],
+        "options": [
+            "KFC",
+            "Popeyes",
+            "Chick-fil-A",
+            "Wingstop",
+            "Nando's",
+            "Buffalo Wild Wings",
+            "Raising Cane's",
+            "Jollibee"
+        ],
+        "tags": [
+            "chicken",
+            "fast food",
+            "global",
+            "takeaway"
+        ]
+    }
+]

@@ -1,25 +1,53 @@
-{
-    "id": "british_biscuits",
-    "name": "Classic British Biscuits",
-    "questions": [
-        "Which biscuit is the ultimate tea-dunker?",
-        "Rank these biscuits for a rainy afternoon."
-    ],
-    "options": [
-        "Digestive (Plain)",
-        "Chocolate Digestive",
-        "Custard Cream",
-        "Bourbon",
-        "Hobnob",
-        "Jammie Dodger",
-        "Rich Tea",
-        "Shortbread",
-        "Ginger Nut"
-    ],
-    "tags": [
-        "uk",
-        "treats",
-        "biscuits",
-        "tea"
-    ]
-}
+[
+    {
+        "id": "british_biscuits",
+        "name": "Classic British Biscuits",
+        "questions": [
+            "Which biscuit is the ultimate tea-dunker?",
+            "Rank these biscuits for a rainy afternoon."
+        ],
+        "options": [
+            "Digestive (Plain)",
+            "Chocolate Digestive",
+            "Custard Cream",
+            "Bourbon",
+            "Hobnob",
+            "Jammie Dodger",
+            "Rich Tea",
+            "Shortbread",
+            "Ginger Nut"
+        ],
+        "tags": [
+            "uk",
+            "treats",
+            "biscuits",
+            "tea"
+        ]
+    },
+    {
+        "id": "chocolate_bars_uk",
+        "name": "British Chocolate Bars",
+        "questions": [
+            "What's the best chocolate bar for a sugar crash?",
+            "Rank these corner shop classics."
+        ],
+        "options": [
+            "Dairy Milk",
+            "Galaxy",
+            "KitKat",
+            "Mars Bar",
+            "Twix",
+            "Snickers",
+            "Twirl",
+            "Wispa",
+            "Crunchie",
+            "Double Decker"
+        ],
+        "tags": [
+            "uk",
+            "chocolate",
+            "corner shop",
+            "snacks"
+        ]
+    }
+]

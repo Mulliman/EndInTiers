@@ -40,8 +40,13 @@ export function loadData(): Category[] {
                 const topicPath = path.join(subCatPath, topicFile);
                 try {
                     const content = fs.readFileSync(topicPath, 'utf8');
-                    const topic: Topic = JSON.parse(content);
-                    subcategory.topics.push(topic);
+                    const parsed = JSON.parse(content);
+                    
+                    if (Array.isArray(parsed)) {
+                        subcategory.topics.push(...parsed);
+                    } else {
+                        subcategory.topics.push(parsed);
+                    }
                 } catch (e) {
                     console.error(`Error loading topic ${topicPath}:`, e);
                 }

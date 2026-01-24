@@ -1,23 +1,48 @@
-{
-    "id": "japanese_cuisine",
-    "name": "Japanese Cuisine",
-    "questions": [
-        "What is the highlight of Japanese food for you?",
-        "Rank these from most to least delicious."
-    ],
-    "options": [
-        "Sushi",
-        "Ramen",
-        "Tempura",
-        "Teriyaki Chicken",
-        "Gyoza",
-        "Udon",
-        "Donburi",
-        "Miso Soup"
-    ],
-    "tags": [
-        "japan",
-        "asia",
-        "global"
-    ]
-}
+[
+    {
+        "id": "japanese_cuisine",
+        "name": "Japanese Cuisine",
+        "questions": [
+            "What is the highlight of Japanese food for you?",
+            "Rank these from most to least delicious."
+        ],
+        "options": [
+            "Sushi",
+            "Ramen",
+            "Tempura",
+            "Teriyaki Chicken",
+            "Gyoza",
+            "Udon",
+            "Donburi",
+            "Miso Soup"
+        ],
+        "tags": [
+            "japan",
+            "asia",
+            "global"
+        ]
+    },
+    {
+        "id": "sushi_types",
+        "name": "Types of Sushi",
+        "questions": [
+            "What's your go-to sushi choice?",
+            "Rank these sushi varieties by preference."
+        ],
+        "options": [
+            "Nigiri",
+            "Sashimi",
+            "Maki (Rolls)",
+            "Uramaki (Inside-out rolls)",
+            "Temaki (Hand rolls)",
+            "Gunkan maki (Battleship rolls)",
+            "Chirashi",
+            "Inari"
+        ],
+        "tags": [
+            "sushi",
+            "japan",
+            "seafood"
+        ]
+    }
+]

@@ -1,24 +1,51 @@
-{
-    "id": "italian_pasta",
-    "name": "Italian Pasta Dishes",
-    "questions": [
-        "Which pasta dish is the ultimate comfort food?",
-        "Rank these Italian classics."
-    ],
-    "options": [
-        "Carbonara",
-        "Lasagne",
-        "Spaghetti Bolognese",
-        "Pesto alla Genovese",
-        "Cacio e Pepe",
-        "Amatriciana",
-        "Ravioli",
-        "Spaghetti alle vongole"
-    ],
-    "tags": [
-        "italy",
-        "europe",
-        "pasta",
-        "dinner"
-    ]
-}
+[
+    {
+        "id": "italian_pasta_dishes",
+        "name": "Italian Pasta Dishes",
+        "questions": [
+            "Which pasta dish is the ultimate comfort food?",
+            "Rank these Italian classics."
+        ],
+        "options": [
+            "Carbonara",
+            "Lasagne",
+            "Spaghetti Bolognese",
+            "Pesto alla Genovese",
+            "Cacio e Pepe",
+            "Amatriciana",
+            "Ravioli",
+            "Spaghetti alle vongole"
+        ],
+        "tags": [
+            "italy",
+            "europe",
+            "pasta",
+            "dinner"
+        ]
+    },
+    {
+        "id": "pasta_shapes",
+        "name": "Pasta Shapes",
+        "questions": [
+            "Which pasta shape holds sauce the best?",
+            "Rank these shapes by how much you enjoy eating them."
+        ],
+        "options": [
+            "Penne",
+            "Fusilli",
+            "Spaghetti",
+            "Farfalle (Bow-tie)",
+            "Rigatoni",
+            "Tagliatelle",
+            "Orecchiette",
+            "Conchiglie (Shells)",
+            "Orzo"
+        ],
+        "tags": [
+            "pasta",
+            "italy",
+            "shapes",
+            "cooking"
+        ]
+    }
+]
