@@ -2,6 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import { Socket } from 'socket.io-client';
 import { Category, SubCategory, Topic } from '../types/game';
+import Button from './ui/Button';
+import Card from './ui/Card';
+import Container from './ui/Container';
 
 interface SelectionPhaseProps {
     socket: Socket;
@@ -69,7 +72,7 @@ export default function SelectionPhase({ socket, isChooser, chooserName }: Selec
 
     const confirmSelection = () => {
         if (selectedTopic && selectedOptions.length === 5) {
-            socket.emit('SET_WORDS', selectedTopic.name, selectedOptions, selectedQuestion);
+            socket.emit('SET_WORDS', selectedTopic.id, selectedOptions, selectedQuestion);
         }
     };
 
@@ -88,75 +91,108 @@ export default function SelectionPhase({ socket, isChooser, chooserName }: Selec
 
     if (!isChooser) {
         return (
-            <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-4">
-                <div className="animate-pulse text-center">
-                    <h2 className="text-3xl font-bold mb-4">Waiting...</h2>
-                    <p className="text-xl text-gray-400">{chooserName} is picking the category and words.</p>
+            <Container>
+                <div className="text-center space-y-6">
+                    <div className="relative inline-block">
+                        <div className="text-7xl mb-4 animate-bounce">🤔</div>
+                        <div className="absolute -top-2 -right-2 h-4 w-4 bg-blue-500 rounded-full animate-ping" />
+                    </div>
+                    <h2 className="text-4xl font-black text-white italic">Waiting...</h2>
+                    <p className="text-xl text-blue-400 font-medium max-w-md mx-auto">
+                        <span className="font-black text-white">{chooserName}</span> is carefully selecting the perfect topic and words.
+                    </p>
                 </div>
-            </div>
+            </Container>
         );
     }
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-4">
+        <Container className="justify-start py-20 px-4">
             <div className="w-full max-w-4xl">
-                <div className="flex items-center justify-between mb-8">
-                    <h1 className="text-3xl font-bold text-blue-400">
-                        {step === 'CATEGORY' && 'Choose a Category'}
-                        {step === 'SUBCATEGORY' && `Browse ${selectedCategory?.name}`}
-                        {step === 'TOPIC' && `Select a Topic in ${selectedSubCategory?.name}`}
-                        {step === 'QUESTION' && `Pick a Question for ${selectedTopic?.name}`}
-                        {step === 'OPTIONS' && `Select 5 Options`}
-                    </h1>
+                <div className="flex items-center justify-between mb-12">
+                    <div>
+                        <p className="text-blue-500 font-bold tracking-widest uppercase text-xs mb-1">Phase: Selection</p>
+                        <h1 className="text-4xl font-black text-white">
+                            {step === 'CATEGORY' && 'Pick a Category'}
+                            {step === 'SUBCATEGORY' && `${selectedCategory?.name}`}
+                            {step === 'TOPIC' && `${selectedSubCategory?.name}`}
+                            {step === 'QUESTION' && `The Question`}
+                            {step === 'OPTIONS' && `Select 5 Items`}
+                        </h1>
+                    </div>
                     {step !== 'CATEGORY' && (
-                        <button 
+                        <Button 
+                            variant="outline" 
+                            size="sm" 
                             onClick={goBack}
-                            className="text-gray-400 hover:text-white underline"
                         >
-                            Back
-                        </button>
+                            ← Back
+                        </Button>
                     )}
                 </div>
 
                 {step === 'CATEGORY' && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {categories.map((cat) => (
-                            <button
-                                key={cat.name}
-                                onClick={() => handleCategoryClick(cat)}
-                                className="bg-gray-800 hover:bg-gray-700 border border-gray-600 rounded-xl p-6 text-xl font-semibold transition transform hover:scale-105"
+                            <Card 
+                                key={cat.name} 
+                                className="cursor-pointer hover:border-blue-500/50 hover:bg-blue-500/5 group"
+                                variant="glass"
                             >
-                                {cat.name}
-                            </button>
+                                <button
+                                    onClick={() => handleCategoryClick(cat)}
+                                    className="w-full h-full text-left"
+                                >
+                                    <h3 className="text-2xl font-black group-hover:text-blue-400 transition-colors">{cat.name}</h3>
+                                    <p className="text-gray-500 text-sm mt-2">{cat.subcategories.length} Collections available</p>
+                                </button>
+                            </Card>
                         ))}
                     </div>
                 )}
 
                 {step === 'SUBCATEGORY' && selectedCategory && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {selectedCategory.subcategories.map((sub) => (
-                            <button
-                                key={sub.name}
-                                onClick={() => handleSubCategoryClick(sub)}
-                                className="bg-gray-800 hover:bg-gray-700 border border-gray-600 rounded-xl p-6 text-xl font-semibold transition transform hover:scale-105"
+                            <Card 
+                                key={sub.name} 
+                                className="cursor-pointer hover:border-purple-500/50 hover:bg-purple-500/5 group"
+                                variant="glass"
                             >
-                                {sub.name}
-                            </button>
+                                <button
+                                    onClick={() => handleSubCategoryClick(sub)}
+                                    className="w-full h-full text-left"
+                                >
+                                    <h3 className="text-2xl font-black group-hover:text-purple-400 transition-colors">{sub.name}</h3>
+                                    <p className="text-gray-500 text-sm mt-2">{sub.topics.length} Topics ready</p>
+                                </button>
+                            </Card>
                         ))}
                     </div>
                 )}
 
                 {step === 'TOPIC' && selectedSubCategory && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {selectedSubCategory.topics.map((topic) => (
-                            <button
-                                key={topic.id}
-                                onClick={() => handleTopicClick(topic)}
-                                className="bg-gray-800 hover:bg-gray-700 border border-gray-600 rounded-xl p-6 text-xl font-semibold transition transform hover:scale-105 text-left"
+                            <Card 
+                                key={topic.id} 
+                                className="cursor-pointer hover:border-pink-500/50 hover:bg-pink-500/5 group"
+                                variant="glass"
                             >
-                                <div className="text-lg">{topic.name}</div>
-                                <div className="text-sm text-gray-400 mt-1">{topic.tags.join(', ')}</div>
-                            </button>
+                                <button
+                                    onClick={() => handleTopicClick(topic)}
+                                    className="w-full h-full text-left"
+                                >
+                                    <h3 className="text-xl font-black group-hover:text-pink-400 transition-colors">{topic.name}</h3>
+                                    <div className="flex flex-wrap gap-2 mt-3">
+                                        {topic.tags.map(tag => (
+                                            <span key={tag} className="text-[10px] bg-gray-800 text-gray-400 px-2 py-0.5 rounded-full uppercase tracking-tighter">
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </button>
+                            </Card>
                         ))}
                     </div>
                 )}
@@ -164,23 +200,26 @@ export default function SelectionPhase({ socket, isChooser, chooserName }: Selec
                 {step === 'QUESTION' && selectedTopic && (
                     <div className="flex flex-col gap-4">
                         {selectedTopic.questions.map((q) => (
-                            <button
+                            <Button
                                 key={q}
                                 onClick={() => handleQuestionClick(q)}
-                                className="bg-gray-800 hover:bg-gray-700 border border-gray-600 rounded-xl p-6 text-xl font-semibold transition text-left"
+                                variant="outline"
+                                className="text-xl py-8 justify-start px-8 border-gray-800 hover:border-blue-500/50 hover:bg-blue-500/5"
                             >
                                 {q}
-                            </button>
+                            </Button>
                         ))}
                     </div>
                 )}
 
                 {step === 'OPTIONS' && selectedTopic && (
                     <div className="w-full">
-                        <p className="text-xl text-center mb-6 text-gray-300 italic">
-                            "{selectedQuestion}"
-                        </p>
-                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
+                        <Card variant="glass" className="mb-8 border-blue-500/30">
+                             <p className="text-xs font-bold text-blue-500 uppercase tracking-widest mb-1">Selected Question</p>
+                             <h2 className="text-2xl font-black italic">"{selectedQuestion}"</h2>
+                        </Card>
+
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
                             {selectedTopic.options.map((option) => {
                                 const isSelected = selectedOptions.includes(option);
                                 return (
@@ -188,10 +227,10 @@ export default function SelectionPhase({ socket, isChooser, chooserName }: Selec
                                         key={option}
                                         onClick={() => handleOptionClick(option)}
                                         className={`
-                                            p-4 rounded-lg text-lg font-medium transition
+                                            p-4 rounded-xl text-sm font-bold transition-all transform active:scale-95
                                             ${isSelected 
-                                                ? 'bg-blue-600 text-white ring-2 ring-blue-400' 
-                                                : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}
+                                                ? 'bg-blue-600 text-white shadow-[0_0_20px_rgba(37,99,235,0.4)] border-2 border-blue-400' 
+                                                : 'bg-gray-900 border-2 border-gray-800 text-gray-400 hover:border-gray-700'}
                                         `}
                                     >
                                         {option}
@@ -200,23 +239,20 @@ export default function SelectionPhase({ socket, isChooser, chooserName }: Selec
                             })}
                         </div>
 
-                        <div className="flex justify-center">
-                            <button
+                        <div className="fixed bottom-0 left-0 right-0 p-8 bg-gray-950/80 backdrop-blur-xl border-t border-gray-900 flex justify-center z-50">
+                            <Button
                                 onClick={confirmSelection}
                                 disabled={selectedOptions.length !== 5}
-                                className={`
-                                    px-8 py-3 rounded-full text-xl font-bold transition
-                                    ${selectedOptions.length === 5
-                                        ? 'bg-green-500 hover:bg-green-600 text-white transform hover:scale-105'
-                                        : 'bg-gray-700 text-gray-500 cursor-not-allowed'}
-                                `}
+                                variant="success"
+                                size="xl"
+                                className="shadow-[0_0_30px_rgba(22,163,74,0.3)]"
                             >
                                 Confirm Selection ({selectedOptions.length}/5)
-                            </button>
+                            </Button>
                         </div>
                     </div>
                 )}
             </div>
-        </div>
+        </Container>
     );
 }

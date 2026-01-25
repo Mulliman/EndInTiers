@@ -1,7 +1,10 @@
 'use client';
 import React from 'react';
 import { Socket } from 'socket.io-client';
-import { GameState, Player } from '../types/game';
+import { GameState } from '../types/game';
+import Button from './ui/Button';
+import Card from './ui/Card';
+import Container from './ui/Container';
 
 interface ResultsPhaseProps {
     socket: Socket;
@@ -17,144 +20,158 @@ const TIER_COLORS: Record<number, string> = {
     4: 'text-red-500', 3: 'text-orange-500', 2: 'text-yellow-500', 1: 'text-green-500', 0: 'text-blue-500'
 };
 
+const TIER_BG: Record<number, string> = {
+    4: 'bg-red-500/10 border-red-500/30', 
+    3: 'bg-orange-500/10 border-orange-500/30', 
+    2: 'bg-yellow-500/10 border-yellow-500/30', 
+    1: 'bg-green-500/10 border-green-500/30', 
+    0: 'bg-blue-500/10 border-blue-500/30'
+};
+
 export default function ResultsPhase({ socket, gameState, playerId }: ResultsPhaseProps) {
     const { players, currentRound, nextChooserId, lastRoundScores } = gameState;
     const chooser = players.find(p => p.isChooser);
-    const myPlayer = players.find(p => p.id === playerId);
-    
-    // Sort players by total score
     const sortedPlayers = [...players].sort((a, b) => b.score - a.score);
-
     const isNextChooser = nextChooserId === playerId;
 
     const handleStartNextRound = () => {
         socket.emit('START_NEXT_ROUND');
     };
 
-
     return (
-        <div className="flex flex-col items-center min-h-screen bg-gray-900 text-white p-4 pb-20">
-            <h1 className="text-4xl font-bold mb-2 text-yellow-400">Round Results</h1>
-            <div className="text-center mb-8">
-                <p className="text-gray-400">Category: {currentRound.category}</p>
+        <Container className="justify-start py-12 px-4 pb-40">
+            <h1 className="text-5xl font-black mb-2 text-yellow-500 drop-shadow-lg">Results</h1>
+            
+            <div className="text-center mb-12">
+                <p className="text-gray-500 font-black tracking-widest uppercase text-xs mb-1">Round Context</p>
+                <p className="text-gray-400 mb-2">Category: <span className="text-white font-bold">{currentRound.category}</span></p>
                 {currentRound.question && (
-                    <p className="text-xl text-white italic mt-1 font-medium">"{currentRound.question}"</p>
+                    <h2 className="text-2xl text-white italic font-black">"{currentRound.question}"</h2>
                 )}
             </div>
 
-            {/* Consolidated Results Table */}
-            <div className="w-full max-w-4xl bg-gray-800 p-6 rounded-lg shadow-lg mb-8">
-                <h2 className="text-2xl font-bold mb-6 text-center border-b border-gray-700 pb-2">
-                    {chooser?.name}'s Master List vs Your Prediction
-                    <span className="block text-green-400 text-lg mt-1 font-normal">(+{lastRoundScores?.[playerId] || 0} pts)</span>
-                </h2>
-                
-                <div className="overflow-x-auto">
-                    <table className="w-full text-left border-collapse">
-                        <thead>
-                            <tr className="text-gray-400 border-b border-gray-600 text-sm uppercase tracking-wider">
-                                <th className="p-4 text-center">Them</th>
-                                <th className="p-4 text-center">Word</th>
-                                <th className="p-4 text-center">You</th>
-                            </tr>
-                        </thead>
-                        <tbody className="space-y-2">
-                            {currentRound.words
-                                .sort((a, b) => {
-                                    const rankA = currentRound.submissions[chooser?.id || '']?.[a] ?? -1;
-                                    const rankB = currentRound.submissions[chooser?.id || '']?.[b] ?? -1;
-                                    return rankB - rankA; // Descending order (S -> D)
-                                })
-                                .map((word) => {
-                                    const chooserRank = currentRound.submissions[chooser?.id || '']?.[word];
-                                    const myRank = currentRound.submissions[playerId]?.[word];
-                                    const isMatch = chooserRank === myRank;
+            <div className="w-full max-w-4xl grid grid-cols-1 lg:grid-cols-5 gap-8">
+                {/* Results Table */}
+                <div className="lg:col-span-3 space-y-6">
+                    <Card variant="glass" className="overflow-hidden p-0 relative border-white/5">
+                        <div className="bg-white/5 p-4 border-b border-white/10 flex items-center justify-between">
+                            <h3 className="font-black text-xl text-blue-400">Match Analysis</h3>
+                            <div className="flex items-center gap-2">
+                                <span className="text-xs font-bold text-gray-500 uppercase tracking-tight">Your Score:</span>
+                                <span className="text-2xl font-black text-green-400">+{lastRoundScores?.[playerId] || 0}</span>
+                            </div>
+                        </div>
+                        
+                        <div className="p-4">
+                            <div className="grid grid-cols-5 text-[10px] font-black text-gray-500 uppercase tracking-[0.2em] mb-4 px-2">
+                                <div className="text-center">Them</div>
+                                <div className="col-span-3 text-center">Item</div>
+                                <div className="text-center">You</div>
+                            </div>
 
-                                    return (
-                                        <tr 
-                                            key={word} 
-                                            className={`
-                                                border-b border-gray-700 last:border-0 hover:bg-gray-750 transition
-                                                ${isMatch ? 'bg-green-900/30' : ''}
-                                            `}
-                                        >
-                                            {/* Chooser's Tier (Master) */}
-                                            <td className="p-4 text-center">
-                                                <div className={`
-                                                    mx-auto w-10 h-10 flex items-center justify-center rounded font-bold text-xl shadow-sm
-                                                    ${isMatch ? 'ring-2 ring-green-500' : ''}
-                                                `}>
-                                                    <span className={TIER_COLORS[chooserRank!]}>
+                            <div className="space-y-2">
+                                {currentRound.words
+                                    .sort((a, b) => {
+                                        const rankA = currentRound.submissions[chooser?.id || '']?.[a] ?? -1;
+                                        const rankB = currentRound.submissions[chooser?.id || '']?.[b] ?? -1;
+                                        return rankB - rankA;
+                                    })
+                                    .map((word) => {
+                                        const chooserRank = currentRound.submissions[chooser?.id || '']?.[word];
+                                        const myRank = currentRound.submissions[playerId]?.[word];
+                                        const isMatch = chooserRank === myRank;
+
+                                        return (
+                                            <div 
+                                                key={word} 
+                                                className={`
+                                                    grid grid-cols-5 items-center p-3 rounded-xl border transition-all
+                                                    ${isMatch ? 'bg-green-500/10 border-green-500/50 shadow-[0_0_15px_rgba(34,197,94,0.1)]' : 'bg-gray-900/50 border-gray-800'}
+                                                `}
+                                            >
+                                                <div className="flex justify-center">
+                                                    <div className={`w-10 h-10 flex items-center justify-center rounded font-black text-xl ${TIER_COLORS[chooserRank!]}`}>
                                                         {TIER_LABELS[chooserRank!]}
-                                                    </span>
+                                                    </div>
                                                 </div>
-                                            </td>
-
-                                            {/* Word */}
-                                            <td className="p-4 text-lg font-medium text-center">{word}</td>
-
-                                            {/* Player's Predicted Tier */}
-                                            <td className="p-4 text-center">
-                                                 <div className="flex flex-col items-center justify-center">
-                                                    <span className={`text-2xl font-bold ${TIER_COLORS[myRank!] || 'text-gray-500'}`}>
-                                                        {TIER_LABELS[myRank!] ?? '-'}
-                                                    </span>
-                                                    {myRank !== undefined && !isMatch && (
-                                                        <span className="text-xs text-red-400 mt-1">
-                                                            (diff: {Math.abs(myRank - chooserRank!)})
+                                                <div className="col-span-3 text-center font-bold text-lg">{word}</div>
+                                                <div className="flex justify-center">
+                                                    <div className="flex flex-col items-center">
+                                                        <span className={`text-xl font-black ${TIER_COLORS[myRank!] || 'text-gray-700'}`}>
+                                                            {TIER_LABELS[myRank!] ?? '-'}
                                                         </span>
-                                                    )}
-                                                 </div>
-                                            </td>
-                                        </tr>
-                                    );
-                                })}
-                        </tbody>
-                    </table>
+                                                        {myRank !== undefined && !isMatch && (
+                                                            <span className="text-[10px] font-black text-red-500/70">
+                                                                Δ{Math.abs(myRank - chooserRank!)}
+                                                            </span>
+                                                        )}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
+                            </div>
+                        </div>
+                    </Card>
+                </div>
+
+                {/* Leaderboard */}
+                <div className="lg:col-span-2 space-y-6">
+                    <Card variant="default" className="border-gray-800">
+                        <h3 className="text-xl font-black mb-6 text-center text-purple-400 uppercase tracking-widest">Standings</h3>
+                        <ul className="space-y-3">
+                            {sortedPlayers.map((p, idx) => (
+                                <li key={p.id} className="group">
+                                    <div className={`
+                                        flex items-center justify-between p-3 rounded-xl transition-all
+                                        ${p.id === playerId ? 'bg-blue-600/20 border border-blue-500/50' : 'bg-gray-900 border border-gray-800'}
+                                    `}>
+                                        <div className="flex items-center gap-3">
+                                            <span className={`
+                                                font-black w-6 text-center
+                                                ${idx === 0 ? 'text-yellow-500 text-xl' : 'text-gray-600'}
+                                            `}>
+                                                {idx + 1}
+                                            </span>
+                                            <div className="flex flex-col">
+                                                <span className={`font-bold ${p.id === playerId ? 'text-white' : 'text-gray-300'}`}>
+                                                    {p.name} {p.id === playerId && '(You)'}
+                                                </span>
+                                                {p.id === nextChooserId && (
+                                                    <span className="text-[8px] font-black text-purple-400 uppercase tracking-tighter">Next Up</span>
+                                                )}
+                                            </div>
+                                        </div>
+                                        <span className="font-mono text-xl font-black text-green-500">
+                                            {p.score}
+                                        </span>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+                    </Card>
                 </div>
             </div>
 
-            {/* Leaderboard */}
-            <div className="mt-8 w-full max-w-2xl bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700">
-                <h2 className="text-2xl font-bold mb-4 text-center text-blue-400">Leaderboard</h2>
-                <ul className="space-y-3">
-                    {sortedPlayers.map((p, idx) => (
-                        <li key={p.id} className="flex items-center justify-between bg-gray-900 p-3 rounded">
-                            <div className="flex items-center gap-4">
-                                <span className={`
-                                    font-bold w-6 text-center
-                                    ${idx === 0 ? 'text-yellow-500 text-xl' : 'text-gray-500'}
-                                `}>
-                                    {idx + 1}
-                                </span>
-                                <span className="text-lg">
-                                    {p.name} {p.id === playerId && '(You)'}
-                                    {p.id === nextChooserId && <span className="ml-2 text-xs bg-purple-600 px-2 py-0.5 rounded text-white">NEXT CHOOSER</span>}
-                                </span>
-                            </div>
-                            <span className="font-mono text-xl font-bold text-green-400">
-                                {p.score} pts
-                            </span>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-
             {/* Next Round Action */}
-            <div className="fixed bottom-0 left-0 right-0 p-4 bg-gray-900 border-t border-gray-800 flex justify-center">
+            <div className="fixed bottom-0 left-0 right-0 p-8 bg-gray-950/80 backdrop-blur-xl border-t border-gray-900 flex justify-center z-50">
                 {isNextChooser ? (
-                    <button 
+                    <Button 
                         onClick={handleStartNextRound}
-                        className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full shadow-lg text-lg animate-bounce"
+                        variant="secondary"
+                        size="xl"
+                        className="animate-pulse shadow-[0_0_30px_rgba(147,51,234,0.3)]"
                     >
-                        Start Next Round
-                    </button>
+                        Begin Next Round
+                    </Button>
                 ) : (
-                    <p className="text-gray-500 italic">
-                        Waiting for {players.find(p => p.id === nextChooserId)?.name} to start...
-                    </p>
+                    <Card variant="glass" className="py-3 px-8 border-white/5">
+                        <p className="text-gray-500 italic font-medium">
+                            Waiting for <span className="text-white font-bold">{players.find(p => p.id === nextChooserId)?.name}</span> to kick off the next round...
+                        </p>
+                    </Card>
                 )}
             </div>
-        </div>
+        </Container>
     );
 }
