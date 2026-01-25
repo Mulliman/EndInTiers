@@ -3,7 +3,7 @@ import { createServer } from 'http';
 import { Server } from 'socket.io';
 import cors from 'cors';
 import { GameState, ServerToClientEvents, ClientToServerEvents, InterServerEvents, SocketData } from './types';
-import { CATEGORIES } from './data';
+import { loadData } from './data';
 
 const app = express();
 app.use(cors());
@@ -129,8 +129,8 @@ io.on('connection', (socket) => {
     });
 
     socket.on('GET_CATEGORIES', () => {
-        // Send categories to the requesting socket (the chooser)
-        socket.emit('CATEGORIES_SENT', CATEGORIES);
+        // Send fresh categories to the requesting socket
+        socket.emit('CATEGORIES_SENT', loadData());
     });
 
     socket.on('SET_WORDS', (categoryName, selectedWords, question) => {
