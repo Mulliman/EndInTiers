@@ -7,7 +7,7 @@ import Card from '../atoms/Card';
 import Container from '../atoms/Container';
 import PhaseHeader from '../modules/PhaseHeader';
 import TierBoard from '../modules/TierBoard';
-import { DraggableWord } from '../modules/RankingItems';
+import { DraggableWord, WordItem } from '../modules/RankingItems';
 
 interface RankingPhaseProps {
     socket: Socket;
@@ -29,6 +29,7 @@ const TIERS = [
 export default function RankingPhase({ socket, words, question, hasSubmitted, submissionsCount, totalPlayers }: RankingPhaseProps) {
     const [rankings, setRankings] = useState<Record<string, string>>({}); 
     const [activeId, setActiveId] = useState<string | null>(null);
+    const { setNodeRef: poolRef } = useDroppable({ id: 'pool' });
 
     const unrankedWords = words.filter(w => !rankings[w]);
 
@@ -106,7 +107,7 @@ export default function RankingPhase({ socket, words, question, hasSubmitted, su
                     <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6">
                         <div className="flex-1 w-full">
                             <div className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-3 text-center md:text-left">Unranked Pool</div>
-                            <div ref={useDroppable({ id: 'pool' }).setNodeRef} className="flex flex-wrap gap-2 justify-center md:justify-start min-h-[44px]">
+                            <div ref={poolRef} className="flex flex-wrap gap-2 justify-center md:justify-start min-h-[44px]">
                                 {unrankedWords.map(w => (
                                     <DraggableWord key={w} id={w} />
                                 ))}
@@ -127,7 +128,7 @@ export default function RankingPhase({ socket, words, question, hasSubmitted, su
                
                 <DragOverlay>
                     {activeId ? (
-                        <DraggableWord id={activeId} isOverlay />
+                        <WordItem id={activeId} isOverlay />
                     ) : null}
                 </DragOverlay>
             </Container>

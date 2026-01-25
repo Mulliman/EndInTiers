@@ -1,25 +1,31 @@
 import React from 'react';
 import { useDraggable, useDroppable } from '@dnd-kit/core';
 
-export function DraggableWord({ id, isOverlay = false }: { id: string, isOverlay?: boolean }) {
-    const { attributes, listeners, setNodeRef, transform } = useDraggable({ id });
-    const style = transform ? {
-        transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
-    } : undefined;
+export function WordItem({ id, isOverlay = false, isDragging = false }: { id: string, isOverlay?: boolean, isDragging?: boolean }) {
+    return (
+        <div 
+            className={`
+                bg-white text-gray-950 px-4 py-2 rounded-lg shadow-xl font-black text-sm uppercase tracking-tight
+                cursor-grab active:cursor-grabbing touch-none select-none transition-all
+                ${isOverlay ? 'opacity-90 rotate-2 scale-110' : 'hover:scale-105'}
+                ${isDragging ? 'opacity-0' : 'opacity-100'}
+            `}
+        >
+            {id}
+        </div>
+    );
+}
+
+export function DraggableWord({ id }: { id: string }) {
+    const { attributes, listeners, setNodeRef, isDragging } = useDraggable({ id });
 
     return (
         <div 
             ref={setNodeRef} 
-            style={style} 
             {...listeners} 
-            {...attributes} 
-            className={`
-                bg-white text-gray-950 px-4 py-2 rounded-lg shadow-xl font-black text-sm uppercase tracking-tight
-                cursor-grab active:cursor-grabbing touch-none select-none transition-transform
-                ${isOverlay ? 'opacity-90 rotate-2 scale-110' : 'hover:scale-105'}
-            `}
+            {...attributes}
         >
-            {id}
+            <WordItem id={id} isDragging={isDragging} />
         </div>
     );
 }
