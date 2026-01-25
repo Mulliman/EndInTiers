@@ -1,10 +1,12 @@
 'use client';
 import React from 'react';
 import { Socket } from 'socket.io-client';
-import { GameState } from '../types/game';
-import Button from './ui/Button';
-import Card from './ui/Card';
-import Container from './ui/Container';
+import { GameState } from '../../types/game';
+import Button from '../atoms/Button';
+import Card from '../atoms/Card';
+import Container from '../atoms/Container';
+import PhaseHeader from '../modules/PhaseHeader';
+import Leaderboard from '../modules/Leaderboard';
 
 interface ResultsPhaseProps {
     socket: Socket;
@@ -20,14 +22,6 @@ const TIER_COLORS: Record<number, string> = {
     4: 'text-red-500', 3: 'text-orange-500', 2: 'text-yellow-500', 1: 'text-green-500', 0: 'text-blue-500'
 };
 
-const TIER_BG: Record<number, string> = {
-    4: 'bg-red-500/10 border-red-500/30', 
-    3: 'bg-orange-500/10 border-orange-500/30', 
-    2: 'bg-yellow-500/10 border-yellow-500/30', 
-    1: 'bg-green-500/10 border-green-500/30', 
-    0: 'bg-blue-500/10 border-blue-500/30'
-};
-
 export default function ResultsPhase({ socket, gameState, playerId }: ResultsPhaseProps) {
     const { players, currentRound, nextChooserId, lastRoundScores } = gameState;
     const chooser = players.find(p => p.isChooser);
@@ -40,15 +34,16 @@ export default function ResultsPhase({ socket, gameState, playerId }: ResultsPha
 
     return (
         <Container className="justify-start py-12 px-4 pb-40">
-            <h1 className="text-5xl font-black mb-2 text-yellow-500 drop-shadow-lg">Results</h1>
-            
-            <div className="text-center mb-12">
-                <p className="text-gray-500 font-black tracking-widest uppercase text-xs mb-1">Round Context</p>
-                <p className="text-gray-400 mb-2">Category: <span className="text-white font-bold">{currentRound.category}</span></p>
-                {currentRound.question && (
-                    <h2 className="text-2xl text-white italic font-black">"{currentRound.question}"</h2>
-                )}
-            </div>
+            <PhaseHeader 
+                phase="Results"
+                title="Round Review"
+                subtitle={
+                    <span>
+                        Category: <span className="text-white font-bold">{currentRound.category}</span>
+                        {currentRound.question && <span className="block mt-2 text-2xl font-black italic">"{currentRound.question}"</span>}
+                    </span>
+                }
+            />
 
             <div className="w-full max-w-4xl grid grid-cols-1 lg:grid-cols-5 gap-8">
                 {/* Results Table */}
@@ -117,39 +112,15 @@ export default function ResultsPhase({ socket, gameState, playerId }: ResultsPha
 
                 {/* Leaderboard */}
                 <div className="lg:col-span-2 space-y-6">
-                    <Card variant="default" className="border-gray-800">
-                        <h3 className="text-xl font-black mb-6 text-center text-purple-400 uppercase tracking-widest">Standings</h3>
-                        <ul className="space-y-3">
-                            {sortedPlayers.map((p, idx) => (
-                                <li key={p.id} className="group">
-                                    <div className={`
-                                        flex items-center justify-between p-3 rounded-xl transition-all
-                                        ${p.id === playerId ? 'bg-blue-600/20 border border-blue-500/50' : 'bg-gray-900 border border-gray-800'}
-                                    `}>
-                                        <div className="flex items-center gap-3">
-                                            <span className={`
-                                                font-black w-6 text-center
-                                                ${idx === 0 ? 'text-yellow-500 text-xl' : 'text-gray-600'}
-                                            `}>
-                                                {idx + 1}
-                                            </span>
-                                            <div className="flex flex-col">
-                                                <span className={`font-bold ${p.id === playerId ? 'text-white' : 'text-gray-300'}`}>
-                                                    {p.name} {p.id === playerId && '(You)'}
-                                                </span>
-                                                {p.id === nextChooserId && (
-                                                    <span className="text-[8px] font-black text-purple-400 uppercase tracking-tighter">Next Up</span>
-                                                )}
-                                            </div>
-                                        </div>
-                                        <span className="font-mono text-xl font-black text-green-500">
-                                            {p.score}
-                                        </span>
-                                    </div>
-                                </li>
-                            ))}
-                        </ul>
-                    </Card>
+                    <Leaderboard 
+                        standings={sortedPlayers.map(p => ({
+                            id: p.id,
+                            name: p.name,
+                            score: p.score,
+                            isCurrentPlayer: p.id === playerId,
+                            isNextChooser: p.id === nextChooserId
+                        }))}
+                    />
                 </div>
             </div>
 

@@ -4,14 +4,17 @@ description: How to create a new reusable UI component in the frontend.
 
 # Create Component Workflow
 
-Use this workflow when you need to create a new atomic UI component in `src/components/ui`.
+Use this workflow to create new components in the appropriate tier (`atoms` or `modules`).
+
+## Tier Selection
+- **Atoms**: Basic building blocks (e.g., `Badge`, `Icon`, `Tooltip`).
+- **Modules**: Combinations of atoms with feature-specific layout (e.g., `PlayerRow`, `WordGrid`, `TierList`).
 
 ## Steps
-
-1. **Check Existing**: First, verify that a similar component doesn't already exist in `src/components/ui`.
-2. **Define Props**: Create an interface for the component props. Include standard props like `className` and `children` where appropriate.
-3. **Implement**: Create the component file in `src/components/ui/[ComponentName].tsx`.
-4. **Style**: Use Tailwind CSS, ensuring it follows the established design aesthetic (vibrant, modern, glassmorphism if applicable).
+1. **Check Existing**: Verify the component doesn't exist in either `atoms` or `modules`.
+2. **Define Props**: Create an interface for props. For modules, include relevant game data props.
+3. **Implement**: Create the file in `src/components/[atoms|modules]/[ComponentName].tsx`.
+4. **Style**: Use Tailwind CSS. For modules, try to abstract as much "noise" as possible from the higher-level phases.
 5. **Export**: Export the component as default.
 
 ## Template

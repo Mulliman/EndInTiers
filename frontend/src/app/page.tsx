@@ -1,14 +1,14 @@
 'use client';
 import { useState } from 'react';
 import { useGame } from '@/hooks/useGame';
-import Lobby from '@/components/Lobby';
-import SelectionPhase from '@/components/SelectionPhase';
-import RankingPhase from '@/components/RankingPhase';
-import ResultsPhase from '@/components/ResultsPhase';
-import Button from '@/components/ui/Button';
-import Input from '@/components/ui/Input';
-import Card from '@/components/ui/Card';
-import Container from '@/components/ui/Container';
+import Lobby from '@/components/phases/Lobby';
+import SelectionPhase from '@/components/phases/SelectionPhase';
+import RankingPhase from '@/components/phases/RankingPhase';
+import ResultsPhase from '@/components/phases/ResultsPhase';
+import Button from '@/components/atoms/Button';
+import Input from '@/components/atoms/Input';
+import Card from '@/components/atoms/Card';
+import Container from '@/components/atoms/Container';
 
 export default function Home() {
     const { 

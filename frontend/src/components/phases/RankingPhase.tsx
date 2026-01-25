@@ -1,10 +1,13 @@
 'use client';
 import React, { useState } from 'react';
 import { Socket } from 'socket.io-client';
-import { DndContext, DragOverlay, DragStartEvent, DragEndEvent, useDraggable, useDroppable } from '@dnd-kit/core';
-import Button from './ui/Button';
-import Card from './ui/Card';
-import Container from './ui/Container';
+import { DndContext, DragOverlay, DragStartEvent, DragEndEvent, useDroppable } from '@dnd-kit/core';
+import Button from '../atoms/Button';
+import Card from '../atoms/Card';
+import Container from '../atoms/Container';
+import PhaseHeader from '../modules/PhaseHeader';
+import TierBoard from '../modules/TierBoard';
+import { DraggableWord } from '../modules/RankingItems';
 
 interface RankingPhaseProps {
     socket: Socket;
@@ -22,53 +25,6 @@ const TIERS = [
     { id: 'C', value: 1, color: 'from-green-500 to-green-600', shadow: 'shadow-green-500/20' },
     { id: 'D', value: 0, color: 'from-blue-500 to-blue-600', shadow: 'shadow-blue-500/20' },
 ];
-
-function DraggableWord({ id, isOverlay = false }: { id: string, isOverlay?: boolean }) {
-    const { attributes, listeners, setNodeRef, transform } = useDraggable({ id });
-    const style = transform ? {
-        transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
-    } : undefined;
-
-    return (
-        <div 
-            ref={setNodeRef} 
-            style={style} 
-            {...listeners} 
-            {...attributes} 
-            className={`
-                bg-white text-gray-950 px-4 py-2 rounded-lg shadow-xl font-black text-sm uppercase tracking-tight
-                cursor-grab active:cursor-grabbing touch-none select-none transition-transform
-                ${isOverlay ? 'opacity-90 rotate-2 scale-110' : 'hover:scale-105'}
-            `}
-        >
-            {id}
-        </div>
-    );
-}
-
-function DroppableTier({ id, children, color, shadow }: { id: string, children: React.ReactNode, color: string, shadow: string }) {
-    const { setNodeRef, isOver } = useDroppable({ id });
-    return (
-        <div 
-            ref={setNodeRef} 
-            className={`
-                flex items-center gap-4 mb-3 p-3 rounded-2xl transition-all duration-200
-                ${isOver ? 'ring-4 ring-white/20 bg-white/10' : 'bg-white/5'}
-                border border-white/10 min-h-[84px]
-            `}
-        >
-            <div className={`
-                w-12 h-12 flex items-center justify-center rounded-xl font-black text-2xl 
-                bg-gradient-to-br ${color} text-white shadow-lg ${shadow}
-            `}>
-                {id}
-            </div>
-            <div className="flex-1 flex flex-wrap gap-2">
-                {children}
-            </div>
-        </div>
-    );
-}
 
 export default function RankingPhase({ socket, words, question, hasSubmitted, submissionsCount, totalPlayers }: RankingPhaseProps) {
     const [rankings, setRankings] = useState<Record<string, string>>({}); 
@@ -134,22 +90,17 @@ export default function RankingPhase({ socket, words, question, hasSubmitted, su
     return (
         <DndContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
             <Container className="justify-start pt-12 pb-40 px-4">
-                <div className="w-full max-w-2xl text-center mb-10">
-                    <p className="text-blue-500 font-bold tracking-widest uppercase text-xs mb-1">Phase: Ranking</p>
-                    <h1 className="text-3xl font-black text-white italic">
-                        "{question || 'Rank these items based on your opinion'}"
-                    </h1>
-                </div>
+                <PhaseHeader 
+                    phase="Ranking"
+                    title={question || 'Rank these items'}
+                    subtitle="Drag items into their respective tiers based on your evaluation."
+                />
 
-                <div className="w-full max-w-2xl space-y-2">
-                    {TIERS.map(tier => (
-                        <DroppableTier key={tier.id} id={tier.id} color={tier.color} shadow={tier.shadow}>
-                            {words.filter(w => rankings[w] === tier.id).map(w => (
-                                <DraggableWord key={w} id={w} />
-                            ))}
-                        </DroppableTier>
-                    ))}
-                </div>
+                <TierBoard 
+                    tiers={TIERS}
+                    words={words}
+                    rankings={rankings}
+                />
 
                 <div className="fixed bottom-0 left-0 right-0 bg-gray-950/90 backdrop-blur-xl border-t border-gray-900 p-6 z-50">
                     <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6">
