@@ -1,0 +1,30 @@
+[
+    {
+        "id": "global_desserts",
+        "name": "Global Desserts",
+        "questions": [
+            "by preference order",
+            "by how much they feel like a treat",
+            "by how likely you are to order them in a restaurant"
+        ],
+        "options": [
+            "Tiramisu (Italy)",
+            "Crème Brûlée (France)",
+            "Cheesecake (USA)",
+            "Baklava (Turkey)",
+            "Churros (Spain)",
+            "Pasteis de Nata (Portugal)",
+            "Apple Pie (Global/USA)",
+            "Gelato (Italy)",
+            "Mochi (Japan)"
+        ],
+        "tags": [
+            "desserts",
+            "global",
+            "sweet",
+            "treats",
+            "sugar",
+            "baking"
+        ]
+    }
+]

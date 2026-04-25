@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_animals",
+        "name": "Common Pets & Animals",
+        "questions": [
+            "by personal preference",
+            "by how much you'd want one as a pet",
+            "by how cute they are"
+        ],
+        "options": [
+            "Dogs", "Cats", "Birds", "Lions", "Elephants", 
+            "Tigers", "Bears", "Monkeys", "Dolphins", "Penguins"
+        ],
+        "tags": ["v2", "life", "nature", "animals"]
+    }
+]

@@ -1,0 +1,55 @@
+[
+    {
+        "id": "japanese_cuisine",
+        "name": "Japanese Cuisine",
+        "questions": [
+            "by preference order",
+            "by how much you enjoy them as a highlight of Japanese food",
+            "by flavour intensity"
+        ],
+        "options": [
+            "Sushi",
+            "Ramen",
+            "Tempura",
+            "Teriyaki Chicken",
+            "Gyoza",
+            "Udon",
+            "Donburi",
+            "Miso Soup"
+        ],
+        "tags": [
+            "japan",
+            "asia",
+            "global",
+            "dinner",
+            "traditional",
+            "oriental"
+        ]
+    },
+    {
+        "id": "sushi_types",
+        "name": "Types of Sushi",
+        "questions": [
+            "by preference order",
+            "by how often they are your go-to choice"
+        ],
+        "options": [
+            "Nigiri",
+            "Sashimi",
+            "Maki (Rolls)",
+            "Uramaki (Inside-out rolls)",
+            "Temaki (Hand rolls)",
+            "Gunkan maki (Battleship rolls)",
+            "Chirashi",
+            "Inari"
+        ],
+        "tags": [
+            "sushi",
+            "japan",
+            "seafood",
+            "fish",
+            "dinner",
+            "traditional"
+        ]
+    }
+]

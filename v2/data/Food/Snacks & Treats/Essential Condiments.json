@@ -1,0 +1,30 @@
+[
+    {
+        "id": "essential_condiments",
+        "name": "Essential Condiments",
+        "questions": [
+            "by preference order",
+            "by how versatile they are in the kitchen",
+            "by how essential they are for a BBQ"
+        ],
+        "options": [
+            "Ketchup",
+            "Mayonnaise",
+            "Heinz Salad Cream",
+            "Brown Sauce (HP)",
+            "Yellow Mustard",
+            "Sriracha",
+            "Soy Sauce",
+            "Bbq Sauce",
+            "Sweet Chilli Sauce"
+        ],
+        "tags": [
+            "global",
+            "uk",
+            "sauce",
+            "cooking",
+            "condiments",
+            "pantry"
+        ]
+    }
+]

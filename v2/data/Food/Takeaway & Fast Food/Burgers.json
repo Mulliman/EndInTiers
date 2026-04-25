@@ -1,0 +1,17 @@
+[
+    {
+        "id": "v2_burgers",
+        "name": "Burgers",
+        "questions": [
+            "by personal preference",
+            "by how much of a classic they are",
+            "by what you want to eat right now"
+        ],
+        "options": [
+            "Big Mac", "Whopper", "Quarter Pounder", "McChicken", 
+            "Double Cheeseburger", "Bacon Double Cheeseburger", 
+            "Chicken Royale", "Fillet-O-Fish", "Big Tasty", "Cheeseburger"
+        ],
+        "tags": ["v2", "food", "burgers", "fast food"]
+    }
+]

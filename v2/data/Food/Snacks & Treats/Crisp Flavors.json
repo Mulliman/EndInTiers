@@ -1,0 +1,17 @@
+[
+    {
+        "id": "v2_crisp_flavors",
+        "name": "Crisp Flavors",
+        "questions": [
+            "by personal preference",
+            "by how iconic the flavor is",
+            "by how much you crave them"
+        ],
+        "options": [
+            "Ready Salted", "Cheese & Onion", "Salt & Vinegar", "Prawn Cocktail", 
+            "Beef & Onion", "Roast Chicken", "Smoky Bacon", "Worcestershire Sauce", 
+            "Sweet Chili", "Sour Cream & Chive"
+        ],
+        "tags": ["v2", "food", "snacks", "crisps"]
+    }
+]

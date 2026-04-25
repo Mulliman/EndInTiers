@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_game_genres",
+        "name": "Game Genres",
+        "questions": [
+            "by personal preference",
+            "by how much time you sink into them",
+            "by how much you enjoy them"
+        ],
+        "options": [
+            "RPG", "FPS", "Platformer", "Strategy", "Puzzle", 
+            "Fighting", "Racing", "Sports", "Simulation", "Survival"
+        ],
+        "tags": ["v2", "entertainment", "gaming", "genres"]
+    }
+]

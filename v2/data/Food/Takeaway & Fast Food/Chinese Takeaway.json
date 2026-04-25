@@ -1,0 +1,29 @@
+[
+    {
+        "id": "chinese_takeaway_uk",
+        "name": "Chinese Takeaway (UK Style)",
+        "questions": [
+            "by preference order",
+            "by how essential they are for a Friday night order",
+            "by how well they taste as leftovers"
+        ],
+        "options": [
+            "Sweet and Sour Chicken",
+            "Beef in Black Bean Sauce",
+            "Special Fried Rice",
+            "Crispy Chilli Beef",
+            "Chow Mein",
+            "Spring Rolls",
+            "Prawn Toast",
+            "Duck Pancakes"
+        ],
+        "tags": [
+            "uk",
+            "takeaway",
+            "chinese",
+            "british chinese",
+            "dinner",
+            "fast food"
+        ]
+    }
+]

@@ -1,0 +1,31 @@
+[
+    {
+        "id": "indian_takeaway_uk",
+        "name": "Indian Takeaway (UK Style)",
+        "questions": [
+            "by preference order",
+            "by how essential they are for a big order",
+            "by how much you enjoy them with a naan"
+        ],
+        "options": [
+            "Chicken Tikka Masala",
+            "Lamb Jalfrezi",
+            "Beef Madras",
+            "Vindaloo",
+            "Korma",
+            "Peshwari Naan",
+            "Garlic Naan",
+            "Poppadoms & Chutney",
+            "Onion Bhaji",
+            "Chicken Pakora"
+        ],
+        "tags": [
+            "uk",
+            "takeaway",
+            "indian",
+            "curry",
+            "dinner",
+            "spiced"
+        ]
+    }
+]

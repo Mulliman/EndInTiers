@@ -1,0 +1,32 @@
+[
+    {
+        "id": "zoo_animals",
+        "name": "Zoo Animals",
+        "questions": [
+            "by preference order",
+            "by how majestic they are",
+            "by how fun they are to watch"
+        ],
+        "options": [
+            "Lion",
+            "Tiger",
+            "Elephant",
+            "Giraffe",
+            "Zebra",
+            "Monkey",
+            "Penguin",
+            "Kangaroo",
+            "Panda",
+            "Gorilla",
+            "Hippo",
+            "Rhino"
+        ],
+        "tags": [
+            "nature",
+            "animals",
+            "zoo",
+            "wildlife",
+            "safari"
+        ]
+    }
+]

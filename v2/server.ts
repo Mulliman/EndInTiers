@@ -3,6 +3,8 @@ import { createServer as createViteServer } from "vite";
 import http from "http";
 import { Server } from "socket.io";
 import path from "path";
+import fs from "fs";
+import process from "process";
 
 type GameState = 'LOBBY' | 'SELECTING' | 'RANKING' | 'RESULTS';
 
@@ -15,15 +17,34 @@ interface Player {
   connected: boolean;
 }
 
+interface TopicInfo {
+  id: string;
+  name: string;
+  questions: string[];
+  options: string[];
+  tags: string[];
+}
+
+interface Subcategory {
+  name: string;
+  topics: TopicInfo[];
+}
+
+interface Category {
+  category: string;
+  subcategories: Subcategory[];
+}
+
 interface Room {
   code: string;
   state: GameState;
   players: Player[]; // max 8
   chooserIndex: number;
-  roundTopic: { category: string, subcategory: string, topic: string } | null;
+  roundTopic: TopicInfo | null;
   roundPrompt: string | null;
   selectedItems: string[]; // exactly 5
   playerRankings: Record<string, string[]>; // Map player ID to their ranked items
+  categories: Category[];
 }
 
 function generateRoomCode() {
@@ -34,6 +55,63 @@ function generateRoomCode() {
   }
   return result;
 }
+
+// loadedCategories logic is moved up
+
+let loadedCategories: Category[] = [];
+
+function loadData() {
+  const categories: Category[] = [];
+  const baseDir = path.join(process.cwd(), "data");
+
+  if (!fs.existsSync(baseDir)) {
+    console.warn("Data directory not found:", baseDir);
+    return [];
+  }
+
+  const catNames = fs.readdirSync(baseDir);
+  for (const catName of catNames) {
+    const catPath = path.join(baseDir, catName);
+    if (!fs.statSync(catPath).isDirectory()) continue;
+
+    const subcategories: Subcategory[] = [];
+    const subcatNames = fs.readdirSync(catPath);
+
+    for (const subName of subcatNames) {
+      const subPath = path.join(catPath, subName);
+      if (!fs.statSync(subPath).isDirectory()) continue;
+
+      const topics: TopicInfo[] = [];
+      const topicFiles = fs.readdirSync(subPath).filter(f => f.endsWith(".json"));
+
+      for (const topicFile of topicFiles) {
+        const topicPath = path.join(subPath, topicFile);
+        try {
+          const content = JSON.parse(fs.readFileSync(topicPath, "utf-8"));
+          if (Array.isArray(content)) {
+            topics.push(...content);
+          } else {
+            topics.push(content);
+          }
+        } catch (e) {
+          console.error(`Error loading topic ${topicPath}:`, e);
+        }
+      }
+
+      if (topics.length > 0) {
+        subcategories.push({ name: subName, topics });
+      }
+    }
+
+    if (subcategories.length > 0) {
+      categories.push({ category: catName, subcategories });
+    }
+  }
+  return categories;
+}
+
+// Initial load
+loadedCategories = loadData();
 
 function sanitizeRoom(room: Room, playerId: string) {
   // Hide other player rankings during RANKING state
@@ -89,6 +167,7 @@ async function startServer() {
         roundPrompt: null,
         selectedItems: [],
         playerRankings: {},
+        categories: loadedCategories,
       };
       
       rooms.set(code, newRoom);
@@ -139,6 +218,19 @@ async function startServer() {
         room.players.forEach(p => {
           io.to(p.socketId).emit("room_update", sanitizeRoom(room, p.id));
         });
+      }
+    });
+
+    socket.on("RELOAD_DATA", ({ roomCode, playerId }, callback) => {
+      const room = rooms.get(roomCode);
+      if (!room) return;
+      const player = room.players.find(p => p.id === playerId);
+      if (player?.isHost) {
+        loadedCategories = loadData();
+        room.players.forEach(p => {
+          io.to(p.socketId).emit("room_update", sanitizeRoom(room, p.id));
+        });
+        if (callback) callback({ success: true });
       }
     });
 

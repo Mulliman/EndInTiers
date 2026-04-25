@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_full_english",
+        "name": "Full English Components",
+        "questions": [
+            "by performance",
+            "by how much of an elite component it is",
+            "by what you'd miss most if it was gone"
+        ],
+        "options": [
+            "Sausage", "Bacon", "Baked Beans", "Hash Browns", "Fried Egg", 
+            "Black Pudding", "Mushrooms", "Plum Tomatoes", "Toast", "Fried Bread"
+        ],
+        "tags": ["v2", "food", "breakfast", "british"]
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_chores",
+        "name": "Chores",
+        "questions": [
+            "by how much you hate them",
+            "by how satisfying they are once done",
+            "by personal preference"
+        ],
+        "options": [
+            "Washing Dishes", "Doing Laundry", "Vacuuming", "Taking out Trash", 
+            "Cleaning Bathrooms", "Dusting", "Mowing the Lawn", "Ironing", "Cooking", "Mopping"
+        ],
+        "tags": ["v2", "life", "household", "chores"]
+    }
+]

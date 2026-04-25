@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_weather",
+        "name": "Weather",
+        "questions": [
+            "by personal preference",
+            "by how much it ruins your day",
+            "by how much you enjoy it"
+        ],
+        "options": [
+            "Sunny", "Raining", "Snowing", "Thunderstorm", "Cloudy", 
+            "Windy", "Fog", "Hail", "Sleet", "Overcast"
+        ],
+        "tags": ["v2", "life", "nature", "weather"]
+    }
+]

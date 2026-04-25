@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_superheroes",
+        "name": "Superheroes",
+        "questions": [
+            "by power level",
+            "by personal preference",
+            "by how iconic they are"
+        ],
+        "options": [
+            "Spider-Man", "Batman", "Superman", "Iron Man", "Captain America", 
+            "Wonder Woman", "Thor", "Hulk", "Wolverine", "Flash"
+        ],
+        "tags": ["v2", "entertainment", "movies", "comics", "superheroes"]
+    }
+]

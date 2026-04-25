@@ -1,0 +1,58 @@
+[
+    {
+        "id": "italian_pasta_dishes",
+        "name": "Italian Pasta Dishes",
+        "questions": [
+            "by preference order",
+            "by how much they feel like the ultimate comfort food",
+            "by how much you enjoy them at a restaurant"
+        ],
+        "options": [
+            "Carbonara",
+            "Lasagne",
+            "Spaghetti Bolognese",
+            "Pesto alla Genovese",
+            "Cacio e Pepe",
+            "Amatriciana",
+            "Ravioli",
+            "Spaghetti alle vongole"
+        ],
+        "tags": [
+            "italy",
+            "europe",
+            "pasta",
+            "dinner",
+            "traditional",
+            "cooking",
+            "comfort food"
+        ]
+    },
+    {
+        "id": "pasta_shapes",
+        "name": "Pasta Shapes",
+        "questions": [
+            "by preference order",
+            "by how fun they look",
+            "by how much you enjoy eating them"
+        ],
+        "options": [
+            "Penne",
+            "Fusilli",
+            "Spaghetti",
+            "Farfalle (Bow-tie)",
+            "Rigatoni",
+            "Tagliatelle",
+            "Orecchiette",
+            "Conchiglie (Shells)",
+            "Orzo"
+        ],
+        "tags": [
+            "pasta",
+            "italy",
+            "shapes",
+            "cooking",
+            "dinner",
+            "traditional"
+        ]
+    }
+]

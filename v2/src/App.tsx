@@ -19,17 +19,36 @@ export interface Player {
   connected: boolean;
 }
 
+export interface TopicInfo {
+  id: string;
+  name: string;
+  questions: string[];
+  options: string[];
+  tags: string[];
+}
+
+export interface Subcategory {
+  name: string;
+  topics: TopicInfo[];
+}
+
+export interface Category {
+  category: string;
+  subcategories: Subcategory[];
+}
+
 export interface Room {
   code: string;
   state: GameState;
   players: Player[];
   chooser: Player | null;
   chooserIndex: number;
-  roundTopic: { category: string, subcategory: string, topic: string } | null;
+  roundTopic: TopicInfo | null;
   roundPrompt: string | null;
   selectedItems: string[];
   playerRankings: Record<string, string[]>;
   submissions: Record<string, boolean>;
+  categories: Category[];
 }
 
 export default function App() {

@@ -1,0 +1,55 @@
+[
+    {
+        "id": "british_tea_brands",
+        "name": "British Tea Brands",
+        "questions": [
+            "by preference order",
+            "by how well they pair with a biscuit",
+            "by how consistently they deliver a good brew"
+        ],
+        "options": [
+            "Yorkshire Tea",
+            "PG Tips",
+            "Tetley",
+            "Twinings",
+            "Clipper",
+            "Typhoo",
+            "Earl Grey",
+            "English Breakfast"
+        ],
+        "tags": [
+            "tea",
+            "uk",
+            "hot drinks",
+            "british",
+            "breakfast"
+        ]
+    },
+    {
+        "id": "coffee_types",
+        "name": "Coffee Varieties",
+        "questions": [
+            "by how much you enjoy them in the morning",
+            "by preference order",
+            "by how often you order them at a cafe"
+        ],
+        "options": [
+            "Latte",
+            "Cappuccino",
+            "Flat White",
+            "Americano",
+            "Espresso",
+            "Mocha",
+            "Macchiato",
+            "Cortado",
+            "Iced Coffee"
+        ],
+        "tags": [
+            "coffee",
+            "cafe",
+            "hot drinks",
+            "caffeine",
+            "morning"
+        ]
+    }
+]

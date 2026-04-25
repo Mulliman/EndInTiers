@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_consoles",
+        "name": "Consoles",
+        "questions": [
+            "by nostalgia",
+            "by impact on gaming",
+            "by personal preference"
+        ],
+        "options": [
+            "PlayStation 5", "Xbox Series X", "Nintendo Switch", "PC", "PlayStation 2", 
+            "Super Nintendo", "Nintendo 64", "Xbox 360", "GameCube", "Sega Genesis"
+        ],
+        "tags": ["v2", "entertainment", "gaming", "consoles"]
+    }
+]

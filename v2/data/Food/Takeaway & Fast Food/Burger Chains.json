@@ -1,0 +1,58 @@
+[
+    {
+        "id": "burger_chains",
+        "name": "Global Burger Chains",
+        "questions": [
+            "by preference order",
+            "by the quality of the burgers",
+            "by how much they represent a fast food giant"
+        ],
+        "options": [
+            "McDonald's",
+            "Burger King",
+            "Five Guys",
+            "Wendy's",
+            "Shake Shack",
+            "In-N-Out Burger",
+            "Carl's Jr.",
+            "A&W"
+        ],
+        "tags": [
+            "global",
+            "fast food",
+            "burger",
+            "usa",
+            "takeaway",
+            "brand",
+            "dinner"
+        ]
+    },
+    {
+        "id": "chicken_burger_chains",
+        "name": "Chicken Burger Specialists",
+        "questions": [
+            "by preference order",
+            "by the quality of the chicken",
+            "by how much you enjoy their side dishes"
+        ],
+        "options": [
+            "KFC",
+            "Popeyes",
+            "Chick-fil-A",
+            "Wingstop",
+            "Nando's",
+            "Buffalo Wild Wings",
+            "Raising Cane's",
+            "Jollibee"
+        ],
+        "tags": [
+            "chicken",
+            "fast food",
+            "global",
+            "takeaway",
+            "brand",
+            "dinner",
+            "poultry"
+        ]
+    }
+]

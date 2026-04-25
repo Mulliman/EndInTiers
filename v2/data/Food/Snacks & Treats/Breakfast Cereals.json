@@ -1,0 +1,29 @@
+[
+    {
+        "id": "breakfast_cereals",
+        "name": "Breakfast Cereals",
+        "questions": [
+            "by preference order",
+            "by how much you enjoyed them as a child"
+        ],
+        "options": [
+            "Frosted Flakes / Frosties",
+            "Lucky Charms",
+            "Cheerios",
+            "Coco Pops / Cocoa Puffs",
+            "Froot Loops",
+            "Weetabix",
+            "Cinnamon Toast Crunch",
+            "Rice Krispies",
+            "Corn Flakes"
+        ],
+        "tags": [
+            "uk",
+            "usa",
+            "breakfast",
+            "cereal",
+            "morning",
+            "milk"
+        ]
+    }
+]

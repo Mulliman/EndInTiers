@@ -1,32 +1,47 @@
 import { useState } from "react";
-import { Room } from "../App";
+import { Room, TopicInfo } from "../App";
 import { getSocket } from "../lib/socket";
-import { CATEGORIES } from "../lib/data";
-import { RefreshCw, Edit2, Check } from "lucide-react";
+import { RefreshCw, Edit2, Check, CloudDownload } from "lucide-react";
 
-export const getPromptsForTopic = (topicName: string) => [
-  `Rank these ${topicName} from best to worst`,
-  `Which of these ${topicName} are the most overrated?`,
-  `Rank these ${topicName} based on pure nostalgia`,
-  `Which of these ${topicName} would you take to a desert island?`,
-  `Rank these ${topicName} from most to least essential`
-];
+export const getPromptsForTopic = (topic: TopicInfo) => {
+  if (topic.questions && topic.questions.length > 0) {
+    return topic.questions;
+  }
+  return [
+    `Rank these ${topic.name} from best to worst`,
+    `Which of these ${topic.name} are the most overrated?`,
+    `Rank these ${topic.name} based on pure nostalgia`,
+    `Which of these ${topic.name} would you take to a desert island?`,
+    `Rank these ${topic.name} from most to least essential`
+  ];
+};
 
 interface Props { room: Room; playerId: string; }
 
 export function Selecting({ room, playerId }: Props) {
   const isChooser = room.chooser?.id === playerId;
-  const [selectedTopicObj, setSelectedTopicObj] = useState<any>(null);
-  const [selectedTopicPath, setSelectedTopicPath] = useState<any>(null);
+  const [selectedTopicObj, setSelectedTopicObj] = useState<TopicInfo | null>(null);
+  const [selectedTopicPath, setSelectedTopicPath] = useState<{ category: string, subcategory: string } | null>(null);
   const [prompt, setPrompt] = useState("");
   const [selectedWords, setSelectedWords] = useState<string[]>([]);
   const [error, setError] = useState("");
   const [isEditingPrompt, setIsEditingPrompt] = useState(false);
   const [promptIndex, setPromptIndex] = useState(0);
+  const [isReloading, setIsReloading] = useState(false);
+
+  const me = room.players.find(p => p.id === playerId);
+
+  const handleReloadData = () => {
+    if (!me?.isHost || isReloading) return;
+    setIsReloading(true);
+    getSocket().emit("RELOAD_DATA", { roomCode: room.code, playerId }, () => {
+      setTimeout(() => setIsReloading(false), 500);
+    });
+  };
 
   const handleRandomizePrompt = () => {
     if (!selectedTopicObj) return;
-    const prompts = getPromptsForTopic(selectedTopicObj.name);
+    const prompts = getPromptsForTopic(selectedTopicObj);
     const nextIdx = (promptIndex + 1) % prompts.length;
     setPromptIndex(nextIdx);
     setPrompt(prompts[nextIdx]);
@@ -76,7 +91,7 @@ export function Selecting({ room, playerId }: Props) {
     getSocket().emit("SET_WORDS", {
       roomCode: room.code,
       playerId,
-      topic: selectedTopicPath,
+      topic: selectedTopicObj,
       prompt: prompt.trim() || `Rank these ${selectedTopicObj.name}`,
       items: selectedWords
     });
@@ -92,9 +107,21 @@ export function Selecting({ room, playerId }: Props) {
           </div>
 
           <div className="bento-card p-4 sm:p-6 mb-4">
-            <h3 className="text-xl sm:text-2xl font-bold mb-6">CHOOSE A CATEGORY</h3>
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-xl sm:text-2xl font-bold">CHOOSE A CATEGORY</h3>
+              {me?.isHost && (
+                <button 
+                  onClick={handleReloadData}
+                  disabled={isReloading}
+                  className="flex items-center gap-1.5 px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all disabled:opacity-50"
+                >
+                  <CloudDownload size={14} className={isReloading ? "animate-bounce" : ""} />
+                  {isReloading ? "Reloading..." : "Reload Data"}
+                </button>
+              )}
+            </div>
             <div className="space-y-8">
-            {CATEGORIES.map(cat => (
+            {(room.categories || []).map(cat => (
               <div key={cat.category} className="space-y-4">
                  <span className="label-caps">{cat.category}</span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -104,12 +131,12 @@ export function Selecting({ room, playerId }: Props) {
                       <div className="flex flex-wrap gap-2">
                         {sub.topics.map(topic => (
                           <button
-                            key={topic.name}
+                            key={topic.id || topic.name}
                             onClick={() => {
                               setSelectedTopicObj(topic);
-                              setSelectedTopicPath({ category: cat.category, subcategory: sub.name, topic: topic.name });
+                              setSelectedTopicPath({ category: cat.category, subcategory: sub.name });
                               setSelectedWords([]);
-                              const initialPrompt = getPromptsForTopic(topic.name)[0];
+                              const initialPrompt = getPromptsForTopic(topic)[0];
                               setPrompt(initialPrompt);
                               setPromptIndex(0);
                               setIsEditingPrompt(false);
@@ -191,7 +218,7 @@ export function Selecting({ room, playerId }: Props) {
                </div>
                
                <div className="grid grid-cols-2 gap-3">
-                 {selectedTopicObj.items.map((item: string) => {
+                 {(selectedTopicObj.options || []).map((item: string) => {
                    const isSelected = selectedWords.includes(item);
                    return (
                      <button

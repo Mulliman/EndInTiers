@@ -1,0 +1,33 @@
+[
+    {
+        "id": "programming_languages",
+        "name": "Programming Languages",
+        "questions": [
+            "by preference order",
+            "by how enjoyable they are to write",
+            "by how powerful they feel to use"
+        ],
+        "options": [
+            "TypeScript",
+            "JavaScript",
+            "Python",
+            "Java",
+            "C++",
+            "Rust",
+            "Go",
+            "Ruby",
+            "Swift",
+            "Kotlin",
+            "PHP",
+            "C#"
+        ],
+        "tags": [
+            "coding",
+            "tech",
+            "development",
+            "software",
+            "engineering",
+            "languages"
+        ]
+    }
+]

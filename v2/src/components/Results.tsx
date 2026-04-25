@@ -147,7 +147,7 @@ export function Results({ room, playerId }: Props) {
                   <div className="text-center mb-2">
                     <span className="label-caps block">The Reveal</span>
                     <h2 className="text-2xl font-bold">{chooser.name}&apos;s Rankings</h2>
-                    <p className="text-sm opacity-50 mt-1">{room.roundTopic?.topic}</p>
+                    <p className="text-sm opacity-50 mt-1">{room.roundTopic?.name}</p>
                   </div>
                   
                   <div className="bento-card p-4 sm:p-6 flex flex-col gap-3 pointer-events-none">

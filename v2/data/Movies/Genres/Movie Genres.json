@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_movie_genres",
+        "name": "Movie Genres",
+        "questions": [
+            "by personal preference",
+            "by how much you watch them",
+            "by how much you enjoy a night out for them"
+        ],
+        "options": [
+            "Action", "Comedy", "Drama", "Horror", "Sci-Fi", 
+            "Romance", "Thriller", "Fantasy", "Animation", "Documentary"
+        ],
+        "tags": ["v2", "entertainment", "movies", "genres"]
+    }
+]
