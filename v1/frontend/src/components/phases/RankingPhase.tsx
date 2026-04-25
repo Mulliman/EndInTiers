@@ -117,9 +117,9 @@ export default function RankingPhase({ socket, words, question, hasSubmitted, su
                         <Button
                             onClick={submitRanking}
                             disabled={!isComplete}
-                            variant="success"
-                            size="lg"
-                            className="w-full md:w-auto min-w-[200px] shadow-[0_0_20px_rgba(22,163,74,0.3)]"
+                            variant="primary"
+                            size="big"
+                            className="w-full md:w-auto min-w-[200px]"
                         >
                             Submit Rank
                         </Button>

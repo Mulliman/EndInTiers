@@ -34,10 +34,10 @@ export default function Home() {
                         <Lobby gameState={gameState} playerId={socket.id || ''} />
                         {myPlayer?.isHost && (
                             <div className="fixed bottom-8 left-0 right-0 flex justify-center">
-                                <Button 
+                        <Button 
                                     onClick={startGame}
-                                    variant="success"
-                                    size="xl"
+                                    variant="primary"
+                                    size="big"
                                 >
                                     Start Game
                                 </Button>
@@ -110,7 +110,7 @@ export default function Home() {
                         <Button 
                             onClick={() => createGame(name)}
                             variant="primary"
-                            size="lg"
+                            size="big"
                         >
                             Host New Game
                         </Button>
@@ -133,6 +133,7 @@ export default function Home() {
                         <Button
                             onClick={() => joinGame(name, roomCode)}
                             variant="secondary"
+                            size="normal"
                             className="whitespace-nowrap"
                         >
                             Join Game

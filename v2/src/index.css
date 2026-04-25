@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+@import "tailwindcss";
+
+/* Make scrollbars subtle globally */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+@theme {
+  --color-s-tier: #FF4B4B;
+  --color-a-tier: #FF8F3F;
+  --color-b-tier: #FFD338;
+  --color-c-tier: #4BD663;
+  --color-d-tier: #3F9CFF;
+
+  --color-background: #0A0A0B;
+  --color-surface: #16161E;
+  --color-surface-hover: rgba(255, 255, 255, 0.05);
+  --color-primary: #3F9CFF;
+  --color-text: #FFFFFF;
+  --color-text-muted: rgba(255, 255, 255, 0.5);
+
+  --font-display: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+/* Tier Colors helper classes */
+.bg-s-tier { background-color: var(--color-s-tier); }
+.bg-a-tier { background-color: var(--color-a-tier); }
+.bg-b-tier { background-color: var(--color-b-tier); }
+.bg-c-tier { background-color: var(--color-c-tier); }
+.bg-d-tier { background-color: var(--color-d-tier); }
+
+.text-s-tier { color: var(--color-s-tier); }
+.text-a-tier { color: var(--color-a-tier); }
+.text-b-tier { color: var(--color-b-tier); }
+.text-c-tier { color: var(--color-c-tier); }
+.text-d-tier { color: var(--color-d-tier); }
+
+.bento-card {
+  background-color: var(--color-surface);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.label-caps {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.5;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "It All Ends In Tiers",
+  "description": "A real-time multiplayer party game based on tier ranking. Players guess how the Chooser will rank 5 items.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

@@ -178,9 +178,8 @@ export default function SelectionPhase({ socket, isChooser, chooserName }: Selec
                         <Button
                             onClick={confirmSelection}
                             disabled={selectedOptions.length !== 5}
-                            variant="success"
-                            size="xl"
-                            className="shadow-[0_0_30px_rgba(22,163,74,0.3)]"
+                            variant="primary"
+                            size="big"
                         >
                             Confirm Selection ({selectedOptions.length}/5)
                         </Button>
