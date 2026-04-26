@@ -145,7 +145,7 @@ async function startServer() {
   const app = express();
   const server = http.createServer(app);
   const io = new Server(server, { cors: { origin: "*" } });
-  const PORT = 3000;
+  const PORT = Number(process.env.PORT) || 3000;
 
   const rooms = new Map<string, Room>();
 
