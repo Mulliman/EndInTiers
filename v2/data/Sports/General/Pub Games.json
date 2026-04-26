@@ -1,0 +1,24 @@
+[
+    {
+        "id": "pub_games",
+        "name": "Pub Games",
+        "questions": [
+            "by entertainment value after a few pints",
+            "by how competitive you get",
+            "by personal preference"
+        ],
+        "options": [
+            "Darts",
+            "Pool",
+            "Snooker",
+            "Pub Quiz",
+            "Dominoes",
+            "Cards (e.g. Cribbage)",
+            "Table Football",
+            "Bar Billiards",
+            "Skittles",
+            "Fruit Machines"
+        ],
+        "tags": ["v2", "sports", "games", "pub", "british"]
+    }
+]

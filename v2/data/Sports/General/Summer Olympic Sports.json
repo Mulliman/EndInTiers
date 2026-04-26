@@ -1,0 +1,24 @@
+[
+    {
+        "id": "summer_olympic_sports",
+        "name": "Summer Olympic Sports",
+        "questions": [
+            "by how exciting they are to watch",
+            "by how much skill they require",
+            "by overall preference"
+        ],
+        "options": [
+            "Athletics (Track & Field)",
+            "Swimming",
+            "Gymnastics",
+            "Cycling (Track/Road)",
+            "Rowing",
+            "Diving",
+            "Weightlifting",
+            "Tennis",
+            "Boxing",
+            "Equestrian"
+        ],
+        "tags": ["v2", "sports", "olympics", "summer", "global"]
+    }
+]

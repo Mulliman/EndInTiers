@@ -1,0 +1,24 @@
+[
+    {
+        "id": "bank_holiday_activities",
+        "name": "Bank Holiday Activities",
+        "questions": [
+            "by how much you enjoy them",
+            "by likelihood of you doing them this weekend",
+            "by personal preference"
+        ],
+        "options": [
+            "Having a BBQ",
+            "Going to the Pub",
+            "DIY / Home Improvements",
+            "Visiting a Garden Centre",
+            "Trip to the Seaside",
+            "Binge-watching TV",
+            "Going for a Country Walk",
+            "Shopping at Retail Parks",
+            "Doing Absolutely Nothing",
+            "Visiting Family"
+        ],
+        "tags": ["v2", "life", "culture", "bank holiday", "british"]
+    }
+]

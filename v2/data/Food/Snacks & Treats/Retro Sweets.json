@@ -1,0 +1,24 @@
+[
+    {
+        "id": "retro_sweets",
+        "name": "Retro Sweets",
+        "questions": [
+            "by nostalgic value",
+            "by taste",
+            "by personal preference"
+        ],
+        "options": [
+            "Cola Bottles",
+            "Flying Saucers",
+            "Drumstick Lollies",
+            "Parma Violets",
+            "Love Hearts",
+            "Refreshers",
+            "Black Jacks",
+            "Fruit Salads",
+            "Wham Bars",
+            "Dip Dab"
+        ],
+        "tags": ["v2", "food", "snacks", "sweets", "retro", "british"]
+    }
+]

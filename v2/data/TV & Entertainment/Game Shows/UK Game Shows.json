@@ -1,0 +1,24 @@
+[
+    {
+        "id": "uk_game_shows",
+        "name": "UK Game Shows",
+        "questions": [
+            "by entertainment value",
+            "by how much you'd want to be a contestant",
+            "by personal preference"
+        ],
+        "options": [
+            "The Chase",
+            "Pointless",
+            "Taskmaster",
+            "Catchphrase",
+            "Countdown",
+            "Who Wants to Be a Millionaire?",
+            "Blankety Blank",
+            "Family Fortunes",
+            "Tipping Point",
+            "Would I Lie to You?"
+        ],
+        "tags": ["v2", "tv", "gameshows", "entertainment", "british"]
+    }
+]

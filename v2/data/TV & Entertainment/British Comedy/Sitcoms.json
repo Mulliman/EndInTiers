@@ -1,0 +1,24 @@
+[
+    {
+        "id": "british_comedy_sitcoms",
+        "name": "British Sitcoms",
+        "questions": [
+            "by overall comedic brilliance",
+            "by how often you re-watch them",
+            "by personal favourite"
+        ],
+        "options": [
+            "Fawlty Towers",
+            "Only Fools and Horses",
+            "Blackadder",
+            "The IT Crowd",
+            "Peep Show",
+            "The Inbetweeners",
+            "Gavin & Stacey",
+            "The Office (UK)",
+            "Father Ted",
+            "Friday Night Dinner"
+        ],
+        "tags": ["v2", "tv", "comedy", "sitcoms", "british"]
+    }
+]

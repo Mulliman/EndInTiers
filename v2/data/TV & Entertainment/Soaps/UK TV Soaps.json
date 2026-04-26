@@ -1,0 +1,24 @@
+[
+    {
+        "id": "uk_tv_soaps",
+        "name": "UK TV Soaps",
+        "questions": [
+            "by how dramatic the storylines are",
+            "by personal attachment to the characters",
+            "by overall preference"
+        ],
+        "options": [
+            "EastEnders",
+            "Coronation Street",
+            "Emmerdale",
+            "Hollyoaks",
+            "Neighbours",
+            "Home and Away",
+            "Casualty",
+            "Holby City",
+            "Doctors",
+            "Brookside"
+        ],
+        "tags": ["v2", "tv", "soaps", "drama", "british"]
+    }
+]
