@@ -1,0 +1,24 @@
+[
+    {
+        "id": "premier_league_teams",
+        "name": "Premier League Teams",
+        "questions": [
+            "by how much you support them",
+            "by the quality of their stadium",
+            "by overall preference"
+        ],
+        "options": [
+            "Arsenal",
+            "Aston Villa",
+            "Chelsea",
+            "Everton",
+            "Liverpool",
+            "Manchester City",
+            "Manchester United",
+            "Newcastle United",
+            "Tottenham Hotspur",
+            "West Ham United"
+        ],
+        "tags": ["v2", "sports", "football", "premier league", "uk"]
+    }
+]

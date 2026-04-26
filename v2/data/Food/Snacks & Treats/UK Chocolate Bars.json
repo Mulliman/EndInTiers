@@ -1,0 +1,24 @@
+[
+    {
+        "id": "uk_chocolate_bars",
+        "name": "UK Chocolate Bars",
+        "questions": [
+            "by how much you love them",
+            "by satisfaction when hungry",
+            "by personal preference"
+        ],
+        "options": [
+            "Dairy Milk",
+            "Snickers",
+            "Mars Bar",
+            "Twix",
+            "KitKat",
+            "Bounty",
+            "Crunchie",
+            "Wispa",
+            "Galaxy",
+            "Double Decker"
+        ],
+        "tags": ["v2", "food", "snacks", "chocolate", "british"]
+    }
+]

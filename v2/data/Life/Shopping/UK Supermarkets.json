@@ -1,0 +1,24 @@
+[
+    {
+        "id": "uk_supermarkets",
+        "name": "UK Supermarkets",
+        "questions": [
+            "by overall value for money",
+            "by quality of products",
+            "by personal preference"
+        ],
+        "options": [
+            "Tesco",
+            "Sainsbury's",
+            "Asda",
+            "Morrisons",
+            "Aldi",
+            "Lidl",
+            "Waitrose",
+            "M&S Food",
+            "Co-op",
+            "Iceland"
+        ],
+        "tags": ["v2", "life", "shopping", "supermarkets", "british"]
+    }
+]
