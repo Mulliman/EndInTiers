@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_uk_reality_shows",
+        "name": "UK Reality Shows",
+        "questions": [
+            "by pure entertainment value",
+            "by how addictive they are to watch",
+            "by the quality of the drama"
+        ],
+        "options": [
+            "I'm a Celebrity... Get Me Out of Here!", "Love Island", "The Great British Bake Off", "Strictly Come Dancing", "The Traitors",
+            "Taskmaster", "Gogglebox", "First Dates", "Come Dine With Me", "The Apprentice"
+        ],
+        "tags": ["v2", "tv", "entertainment", "reality", "uk"]
+    }
+]

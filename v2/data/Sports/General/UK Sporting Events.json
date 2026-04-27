@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_uk_sporting_events",
+        "name": "UK Sporting Events",
+        "questions": [
+            "by excitement and prestige",
+            "by how much you want to attend",
+            "by the atmosphere of the event"
+        ],
+        "options": [
+            "Wimbledon", "FA Cup Final", "The Grand National", "Silverstone Grand Prix", "The Ashes",
+            "Six Nations", "The Open Championship", "London Marathon", "Boat Race", "Cheltenham Festival"
+        ],
+        "tags": ["v2", "sports", "uk", "events", "prestige"]
+    }
+]

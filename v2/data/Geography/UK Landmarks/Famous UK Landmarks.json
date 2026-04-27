@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_famous_uk_landmarks",
+        "name": "Famous UK Landmarks",
+        "questions": [
+            "by how impressive they are to visit",
+            "by how iconic they are",
+            "by how much you'd recommend seeing them"
+        ],
+        "options": [
+            "Stonehenge", "Big Ben", "Tower Bridge", "Edinburgh Castle", "Giant's Causeway",
+            "Windsor Castle", "Angel of the North", "The Eden Project", "Roman Baths", "White Cliffs of Dover"
+        ],
+        "tags": ["v2", "geography", "uk", "landmarks", "tourism"]
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_classic_playground_games",
+        "name": "Classic Playground Games",
+        "questions": [
+            "by how much fun they were to play",
+            "by replayability and staying power",
+            "by how intense the games got"
+        ],
+        "options": [
+            "Tag / It", "Hide and Seek", "British Bulldog", "Stuck in the Mud", "Hopscotch",
+            "Kiss Chase", "Duck Duck Goose", "Marbles", "Conkers", "Red Rover"
+        ],
+        "tags": ["v2", "life", "childhood", "games", "playground"]
+    }
+]
