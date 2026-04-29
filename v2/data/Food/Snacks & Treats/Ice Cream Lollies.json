@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_ice_cream_lollies",
+        "name": "Ice Cream Lollies",
+        "questions": [
+            "by taste and overall enjoyment",
+            "by how refreshing they are on a hot day",
+            "by nostalgic value"
+        ],
+        "options": [
+            "Magnum", "Twister", "Calippo", "Feast", "Fab",
+            "Cornetto", "Mini Milk", "Solero", "Nobbly Bobbly", "Fruit Pastille Lolly"
+        ],
+        "tags": ["v2", "food", "snacks", "ice cream", "summer"]
+    }
+]

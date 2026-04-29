@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_british_superstitions",
+        "name": "British Superstitions",
+        "questions": [
+            "by how likely you are to believe or follow them",
+            "by how ingrained they are in the culture",
+            "by how interesting or quirky they are"
+        ],
+        "options": [
+            "Saluting single magpies", "Saying 'white rabbits' on the first of the month", "Not walking under ladders", "Touching wood", "Throwing salt over the left shoulder",
+            "Putting new shoes on a table", "Opening an umbrella indoors", "Crossing fingers for luck", "Breaking a mirror", "Finding a penny"
+        ],
+        "tags": ["v2", "life", "culture", "british", "superstitions"]
+    }
+]
