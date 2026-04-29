@@ -1,0 +1,24 @@
+[
+    {
+        "id": "v2_history_uk_monarchs",
+        "name": "British Monarchs",
+        "questions": [
+            "by how interesting their reign was",
+            "by their historical impact",
+            "by how much you'd like to have dinner with them"
+        ],
+        "options": [
+            "Henry VIII",
+            "Elizabeth I",
+            "Queen Victoria",
+            "Elizabeth II",
+            "Richard the Lionheart",
+            "William the Conqueror",
+            "George III",
+            "Charles II",
+            "Alfred the Great",
+            "Mary Queen of Scots"
+        ],
+        "tags": ["v2", "history", "uk", "monarchs"]
+    }
+]

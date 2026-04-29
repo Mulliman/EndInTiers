@@ -1,0 +1,24 @@
+[
+    {
+        "id": "v2_gaming_tabletop_classic",
+        "name": "Classic Board Games",
+        "questions": [
+            "by how much fun they are to play with family",
+            "by replayability",
+            "by their strategy and depth"
+        ],
+        "options": [
+            "Monopoly",
+            "Scrabble",
+            "Cluedo",
+            "Risk",
+            "Catan",
+            "Ticket to Ride",
+            "Chess",
+            "Guess Who?",
+            "Trivial Pursuit",
+            "Connect 4"
+        ],
+        "tags": ["v2", "gaming", "tabletop", "board games", "global"]
+    }
+]

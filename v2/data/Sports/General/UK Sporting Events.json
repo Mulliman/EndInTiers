@@ -1,0 +1,24 @@
+[
+    {
+        "id": "v2_sports_uk_events",
+        "name": "Major UK Sporting Events",
+        "questions": [
+            "by how much you look forward to watching them",
+            "by their prestige and history",
+            "by the atmosphere they create"
+        ],
+        "options": [
+            "Wimbledon (Tennis)",
+            "FA Cup Final (Football)",
+            "The Ashes (Cricket)",
+            "Six Nations (Rugby)",
+            "The Grand National (Horse Racing)",
+            "The Open Championship (Golf)",
+            "Silverstone Grand Prix (F1)",
+            "London Marathon",
+            "Oxford vs Cambridge Boat Race",
+            "World Snooker Championship (Crucible)"
+        ],
+        "tags": ["v2", "sports", "events", "uk"]
+    }
+]

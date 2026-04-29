@@ -1,0 +1,24 @@
+[
+    {
+        "id": "v2_tv_reality_shows_uk",
+        "name": "UK Reality & Talent Shows",
+        "questions": [
+            "by entertainment value",
+            "by how likely you are to watch a new season",
+            "by how much you enjoy discussing it with others"
+        ],
+        "options": [
+            "The Great British Bake Off",
+            "Taskmaster",
+            "I'm a Celebrity... Get Me Out of Here!",
+            "Strictly Come Dancing",
+            "Gogglebox",
+            "The Traitors",
+            "Love Island",
+            "MasterChef",
+            "The Apprentice",
+            "First Dates"
+        ],
+        "tags": ["v2", "tv", "entertainment", "reality", "uk"]
+    }
+]

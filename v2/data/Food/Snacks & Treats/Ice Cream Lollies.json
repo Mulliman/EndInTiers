@@ -1,0 +1,24 @@
+[
+    {
+        "id": "v2_food_ice_cream_lollies",
+        "name": "Classic Ice Creams & Lollies",
+        "questions": [
+            "by how much you enjoy eating them on a hot day",
+            "by taste and flavour",
+            "by nostalgia factor"
+        ],
+        "options": [
+            "Twister",
+            "Fab",
+            "Cornetto",
+            "Magnum",
+            "Mini Milk",
+            "Calippo",
+            "Solero",
+            "Feast",
+            "Viennetta",
+            "Fruit Pastille Lolly"
+        ],
+        "tags": ["v2", "food", "snacks", "treats", "uk"]
+    }
+]
