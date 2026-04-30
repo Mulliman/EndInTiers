@@ -1,0 +1,30 @@
+[
+    {
+        "id": "british_sketch_shows",
+        "name": "British Sketch Shows",
+        "questions": [
+            "by how funny you find them",
+            "by how iconic their characters are",
+            "by how quotable their catchphrases are"
+        ],
+        "options": [
+            "Little Britain",
+            "The Fast Show",
+            "Harry Enfield & Chums",
+            "Monty Python's Flying Circus",
+            "Smack the Pony",
+            "French and Saunders",
+            "That Mitchell and Webb Look",
+            "The Catherine Tate Show",
+            "A Bit of Fry and Laurie",
+            "The Two Ronnies"
+        ],
+        "tags": [
+            "comedy",
+            "tv",
+            "british",
+            "sketch",
+            "classic"
+        ]
+    }
+]

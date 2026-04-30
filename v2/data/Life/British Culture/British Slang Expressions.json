@@ -1,0 +1,29 @@
+[
+    {
+        "id": "british_slang_expressions",
+        "name": "British Slang Expressions",
+        "questions": [
+            "by how much you use them",
+            "by how quintessentially British they are",
+            "by how effectively they express their meaning"
+        ],
+        "options": [
+            "Cheeky Nando's",
+            "Banter",
+            "Gutted",
+            "Chuffed",
+            "Knackered",
+            "Dodgy",
+            "Miffed",
+            "Proper",
+            "Mint",
+            "Quid"
+        ],
+        "tags": [
+            "slang",
+            "culture",
+            "british",
+            "language"
+        ]
+    }
+]

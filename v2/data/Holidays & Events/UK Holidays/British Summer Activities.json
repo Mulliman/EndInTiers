@@ -1,0 +1,30 @@
+[
+    {
+        "id": "british_summer_activities",
+        "name": "British Summer Activities",
+        "questions": [
+            "by how much you enjoy doing them",
+            "by how iconic they are for a British summer",
+            "by how likely you are to do them when the sun is out"
+        ],
+        "options": [
+            "Having a BBQ",
+            "Going to a Beer Garden",
+            "Visiting the Seaside",
+            "Having a Picnic in the Park",
+            "Eating a 99 Flake",
+            "Watching Wimbledon",
+            "Going to a Music Festival",
+            "Walking in the Countryside",
+            "Camping",
+            "Visiting a National Trust Property"
+        ],
+        "tags": [
+            "summer",
+            "holidays",
+            "uk",
+            "activities",
+            "outdoors"
+        ]
+    }
+]
