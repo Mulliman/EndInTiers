@@ -1,0 +1,30 @@
+[
+    {
+        "id": "uk_train_operators",
+        "name": "UK Train Operators",
+        "questions": [
+            "by how reliable their service is",
+            "by how comfortable their trains are",
+            "by overall customer satisfaction"
+        ],
+        "options": [
+            "Great Western Railway",
+            "LNER (London North Eastern Railway)",
+            "Avanti West Coast",
+            "CrossCountry",
+            "South Western Railway",
+            "Southeastern",
+            "Thameslink",
+            "Northern",
+            "ScotRail",
+            "Transport for Wales"
+        ],
+        "tags": [
+            "transport",
+            "trains",
+            "railway",
+            "travel",
+            "uk"
+        ]
+    }
+]

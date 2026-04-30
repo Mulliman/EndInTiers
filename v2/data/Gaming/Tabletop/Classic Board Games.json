@@ -1,0 +1,30 @@
+[
+    {
+        "id": "classic_board_games",
+        "name": "Classic Board Games",
+        "questions": [
+            "by how much fun they are to play with family",
+            "by how strategic they are",
+            "by how likely you are to suggest playing them"
+        ],
+        "options": [
+            "Monopoly",
+            "Scrabble",
+            "Cluedo",
+            "Risk",
+            "Trivial Pursuit",
+            "Chess",
+            "Connect 4",
+            "Guess Who?",
+            "Battleship",
+            "The Game of Life"
+        ],
+        "tags": [
+            "gaming",
+            "board games",
+            "tabletop",
+            "family",
+            "classic"
+        ]
+    }
+]

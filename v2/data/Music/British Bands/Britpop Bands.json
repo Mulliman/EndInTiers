@@ -1,0 +1,30 @@
+[
+    {
+        "id": "britpop_bands",
+        "name": "Britpop Bands",
+        "questions": [
+            "by how much you enjoy their music",
+            "by how influential they were to the 90s scene",
+            "by their live performance energy"
+        ],
+        "options": [
+            "Oasis",
+            "Blur",
+            "Pulp",
+            "Suede",
+            "The Verve",
+            "Supergrass",
+            "Elastica",
+            "Ocean Colour Scene",
+            "Cast",
+            "Sleeper"
+        ],
+        "tags": [
+            "music",
+            "britpop",
+            "bands",
+            "90s",
+            "uk"
+        ]
+    }
+]
