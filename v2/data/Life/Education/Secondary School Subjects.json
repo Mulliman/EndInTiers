@@ -1,0 +1,30 @@
+[
+    {
+        "id": "v2_secondary_school_subjects",
+        "name": "Secondary School Subjects",
+        "questions": [
+            "by how interesting the lessons were",
+            "by real-world usefulness",
+            "by how much you enjoyed them"
+        ],
+        "options": [
+            "English",
+            "Maths",
+            "Science",
+            "History",
+            "Geography",
+            "Art & Design",
+            "PE",
+            "IT / Computing",
+            "Design & Technology",
+            "Modern Foreign Languages"
+        ],
+        "tags": [
+            "v2",
+            "life",
+            "education",
+            "school",
+            "uk"
+        ]
+    }
+]

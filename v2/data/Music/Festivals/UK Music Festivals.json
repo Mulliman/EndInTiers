@@ -1,0 +1,29 @@
+[
+    {
+        "id": "v2_uk_music_festivals",
+        "name": "UK Music Festivals",
+        "questions": [
+            "by lineup quality",
+            "by overall atmosphere",
+            "by how much you'd love to attend"
+        ],
+        "options": [
+            "Glastonbury",
+            "Reading & Leeds",
+            "Download",
+            "Isle of Wight Festival",
+            "Boardmasters",
+            "Latitude",
+            "Creamfields",
+            "Parklife",
+            "TRNSMT",
+            "Green Man"
+        ],
+        "tags": [
+            "v2",
+            "music",
+            "festivals",
+            "uk"
+        ]
+    }
+]
