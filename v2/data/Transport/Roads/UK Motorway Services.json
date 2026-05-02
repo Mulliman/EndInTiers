@@ -1,0 +1,24 @@
+[
+    {
+        "id": "v2_uk_motorway_services",
+        "name": "UK Motorway Services",
+        "questions": [
+            "by food and shop choices",
+            "by facility cleanliness",
+            "by how much of a welcome break they are"
+        ],
+        "options": [
+            "Tebay (M6)",
+            "Gloucester (M5)",
+            "Cobham (M25)",
+            "Beaconsfield (M40)",
+            "Norton Canes (M6 Toll)",
+            "Wetherby (A1(M))",
+            "Leigh Delamere (M4)",
+            "Knutsford (M6)",
+            "Fleet (M3)",
+            "Donington Park (M1)"
+        ],
+        "tags": ["v2", "transport", "travel", "british"]
+    }
+]

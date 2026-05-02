@@ -1,0 +1,24 @@
+[
+    {
+        "id": "v2_cleaning_brands",
+        "name": "Cleaning Brands",
+        "questions": [
+            "by effectiveness",
+            "by how satisfying the scent is",
+            "by trustworthiness"
+        ],
+        "options": [
+            "Fairy",
+            "Zoflora",
+            "Flash",
+            "Cif",
+            "Dettol",
+            "Astonish",
+            "Fabulosa",
+            "Pink Stuff",
+            "Domestos",
+            "Lenor"
+        ],
+        "tags": ["v2", "life", "household", "brands"]
+    }
+]

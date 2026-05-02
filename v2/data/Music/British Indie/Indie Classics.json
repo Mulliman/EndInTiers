@@ -1,0 +1,24 @@
+[
+    {
+        "id": "v2_indie_classics",
+        "name": "Indie Classics",
+        "questions": [
+            "by how quickly they get you on the dancefloor",
+            "by singalong factor",
+            "by timelessness"
+        ],
+        "options": [
+            "I Bet You Look Good On The Dancefloor - Arctic Monkeys",
+            "Common People - Pulp",
+            "Parklife - Blur",
+            "Wonderwall - Oasis",
+            "Take Me Out - Franz Ferdinand",
+            "Ruby - Kaiser Chiefs",
+            "Not Nineteen Forever - The Courteeners",
+            "Chelsea Dagger - The Fratellis",
+            "Naive - The Kooks",
+            "Don't Look Back Into The Sun - The Libertines"
+        ],
+        "tags": ["v2", "music", "indie", "british"]
+    }
+]
