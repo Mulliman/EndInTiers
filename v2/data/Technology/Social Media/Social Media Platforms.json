@@ -1,0 +1,29 @@
+[
+    {
+        "id": "v2_social_media_platforms",
+        "name": "Social Media Platforms",
+        "questions": [
+            "by daily usefulness",
+            "by entertainment value",
+            "by how much you enjoy using them"
+        ],
+        "options": [
+            "WhatsApp",
+            "YouTube",
+            "Instagram",
+            "TikTok",
+            "X (Twitter)",
+            "Facebook",
+            "LinkedIn",
+            "Snapchat",
+            "Pinterest",
+            "Reddit"
+        ],
+        "tags": [
+            "v2",
+            "technology",
+            "social media",
+            "apps"
+        ]
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_uk_counties",
+        "name": "UK Counties",
+        "questions": [
+            "by how nice they are for a holiday",
+            "by scenic beauty",
+            "by cultural appeal"
+        ],
+        "options": [
+            "Cornwall", "Devon", "Yorkshire", "Cumbria", "Scottish Highlands",
+            "Gwynedd", "Norfolk", "Pembrokeshire", "Northumberland", "Dorset"
+        ],
+        "tags": ["v2", "geography", "uk", "counties", "regions"]
+    }
+]

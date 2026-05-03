@@ -1,0 +1,30 @@
+[
+    {
+        "id": "v2_iconic_british_brands",
+        "name": "Iconic British Brands",
+        "questions": [
+            "by national pride",
+            "by everyday usefulness",
+            "by brand loyalty"
+        ],
+        "options": [
+            "Marks & Spencer",
+            "Boots",
+            "Cadbury",
+            "BBC",
+            "Royal Mail",
+            "Greggs",
+            "Tetley",
+            "Dyson",
+            "Aston Martin",
+            "PG Tips"
+        ],
+        "tags": [
+            "v2",
+            "life",
+            "culture",
+            "british",
+            "brands"
+        ]
+    }
+]

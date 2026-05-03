@@ -1,0 +1,30 @@
+[
+    {
+        "id": "classic_british_puddings",
+        "name": "Classic British Puddings",
+        "questions": [
+            "by how delicious they are",
+            "by how comforting they are",
+            "by how likely you are to order them in a pub"
+        ],
+        "options": [
+            "Sticky Toffee Pudding",
+            "Spotted Dick",
+            "Jam Roly-Poly",
+            "Eton Mess",
+            "Trifle",
+            "Bread and Butter Pudding",
+            "Apple Crumble",
+            "Victoria Sponge",
+            "Treacle Tart",
+            "Banoffee Pie"
+        ],
+        "tags": [
+            "food",
+            "dessert",
+            "pudding",
+            "british",
+            "sweet"
+        ]
+    }
+]

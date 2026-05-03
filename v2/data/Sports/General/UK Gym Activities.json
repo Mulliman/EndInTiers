@@ -1,0 +1,30 @@
+[
+    {
+        "id": "uk_gym_activities",
+        "name": "UK Gym Activities",
+        "questions": [
+            "by how much you enjoy doing them",
+            "by how effective they are for fitness",
+            "by how satisfying they feel"
+        ],
+        "options": [
+            "Treadmill Running",
+            "Weightlifting",
+            "Cycling / Spin Class",
+            "Rowing Machine",
+            "CrossFit",
+            "Yoga Class",
+            "Pilates",
+            "HIIT Class",
+            "Swimming",
+            "Using the Sauna / Steam Room"
+        ],
+        "tags": [
+            "sports",
+            "fitness",
+            "gym",
+            "health",
+            "uk"
+        ]
+    }
+]

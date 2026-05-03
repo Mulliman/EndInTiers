@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_iconic_british_bands",
+        "name": "Iconic British Bands",
+        "questions": [
+            "by how much you enjoy listening to them",
+            "by their cultural impact and legacy",
+            "by how good their live performances (are/would be)"
+        ],
+        "options": [
+            "The Beatles", "Queen", "Oasis", "Arctic Monkeys", "Coldplay",
+            "The Rolling Stones", "Fleetwood Mac", "Pink Floyd", "Blur", "Spice Girls"
+        ],
+        "tags": ["v2", "music", "bands", "british", "iconic"]
+    }
+]

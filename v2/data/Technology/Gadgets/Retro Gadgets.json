@@ -1,0 +1,29 @@
+[
+    {
+        "id": "v2_retro_gadgets",
+        "name": "Retro Gadgets",
+        "questions": [
+            "by nostalgia",
+            "by how revolutionary they were",
+            "by cool factor"
+        ],
+        "options": [
+            "Game Boy",
+            "Walkman",
+            "VHS Player",
+            "Nokia 3310",
+            "iPod Classic",
+            "Polaroid Camera",
+            "Tamagotchi",
+            "Floppy Disk",
+            "Beeper/Pager",
+            "Dial-up Modem"
+        ],
+        "tags": [
+            "v2",
+            "technology",
+            "gadgets",
+            "retro"
+        ]
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_savoury_pastries",
+        "name": "Savoury Pastries",
+        "questions": [
+            "by taste and satisfaction",
+            "by how much you enjoy them as a quick lunch",
+            "by the quality of the filling and pastry"
+        ],
+        "options": [
+            "Sausage Roll", "Cornish Pasty", "Cheese and Onion Pasty", "Steak Bake", "Chicken Tikka Slice",
+            "Pork Pie", "Scotch Egg", "Sausage and Bean Melt", "Cheese Twist", "Vegan Sausage Roll"
+        ],
+        "tags": ["v2", "food", "snacks", "pastries", "savoury"]
+    }
+]

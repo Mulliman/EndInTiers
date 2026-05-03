@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_premier_league_stadiums",
+        "name": "Premier League Stadiums",
+        "questions": [
+            "by matchday atmosphere",
+            "by architectural beauty",
+            "by historical significance"
+        ],
+        "options": [
+            "Old Trafford", "Anfield", "Emirates Stadium", "Tottenham Hotspur Stadium", "Stamford Bridge",
+            "Etihad Stadium", "St James' Park", "Villa Park", "Goodison Park", "London Stadium"
+        ],
+        "tags": ["v2", "sports", "football", "premier league", "stadiums", "uk"]
+    }
+]

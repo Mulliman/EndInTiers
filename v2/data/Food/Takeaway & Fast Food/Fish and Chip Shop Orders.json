@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_fish_and_chip_shop_orders",
+        "name": "Fish and Chip Shop Orders",
+        "questions": [
+            "by overall deliciousness",
+            "by absolute essential status",
+            "by value for money"
+        ],
+        "options": [
+            "Cod and Chips", "Haddock and Chips", "Battered Sausage", "Saveloy", "Fish Cake",
+            "Pie and Chips", "Curry Sauce", "Mushy Peas", "Gravy", "Scraps"
+        ],
+        "tags": ["v2", "food", "takeaway", "fish and chips", "british"]
+    }
+]

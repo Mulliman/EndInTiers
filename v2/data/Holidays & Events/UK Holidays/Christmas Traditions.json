@@ -1,0 +1,30 @@
+[
+    {
+        "id": "christmas_traditions",
+        "name": "Christmas Traditions",
+        "questions": [
+            "by how much you enjoy taking part in them",
+            "by how essential they are to a proper Christmas",
+            "by how much they get you in the festive spirit"
+        ],
+        "options": [
+            "Decorating the Tree",
+            "Watching the King's Speech",
+            "Opening Advent Calendars",
+            "Going to a Pantomime",
+            "Pulling Christmas Crackers",
+            "Leaving Mince Pies for Santa",
+            "Singing Carols",
+            "Wearing Christmas Jumpers",
+            "Watching Christmas TV Specials",
+            "Boxing Day Walks"
+        ],
+        "tags": [
+            "christmas",
+            "holidays",
+            "uk",
+            "traditions",
+            "festive"
+        ]
+    }
+]
