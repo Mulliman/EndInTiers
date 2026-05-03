@@ -1,0 +1,24 @@
+[
+    {
+        "id": "v2_summer_activities",
+        "name": "Summer Activities",
+        "questions": [
+            "by how much fun they are on a sunny day",
+            "by nostalgia factor",
+            "by how perfectly they capture the British summer"
+        ],
+        "options": [
+            "Beer Garden Pint",
+            "BBQ in the Rain",
+            "Trip to the Seaside",
+            "Eating a 99 Flake",
+            "Picnic in the Park",
+            "Music Festival",
+            "Wimbledon on TV",
+            "Strawberry Picking",
+            "Paddling Pool in the Garden",
+            "Fish and Chips on the Beach"
+        ],
+        "tags": ["v2", "holidays", "summer", "british"]
+    }
+]

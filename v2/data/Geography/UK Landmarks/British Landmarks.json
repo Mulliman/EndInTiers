@@ -1,0 +1,24 @@
+[
+    {
+        "id": "v2_british_landmarks",
+        "name": "British Landmarks",
+        "questions": [
+            "by how awe-inspiring they are",
+            "by architectural/natural beauty",
+            "by cultural significance"
+        ],
+        "options": [
+            "Stonehenge",
+            "Big Ben",
+            "The Angel of the North",
+            "Edinburgh Castle",
+            "Giant's Causeway",
+            "White Cliffs of Dover",
+            "Tower Bridge",
+            "Eden Project",
+            "Mount Snowdon",
+            "Hadrian's Wall"
+        ],
+        "tags": ["v2", "geography", "landmarks", "british"]
+    }
+]

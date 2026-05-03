@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_britpop_anthems",
+        "name": "Britpop Anthems",
+        "questions": [
+            "by singalong potential",
+            "by overall musical quality",
+            "by sheer 90s nostalgia"
+        ],
+        "options": [
+            "Wonderwall - Oasis", "Parklife - Blur", "Common People - Pulp", "Bitter Sweet Symphony - The Verve", "Don't Look Back In Anger - Oasis",
+            "Girls & Boys - Blur", "Alright - Supergrass", "Disco 2000 - Pulp", "The Riverboat Song - Ocean Colour Scene", "A Design For Life - Manic Street Preachers"
+        ],
+        "tags": ["v2", "music", "british", "bands", "britpop", "90s"]
+    }
+]

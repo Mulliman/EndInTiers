@@ -1,0 +1,24 @@
+[
+    {
+        "id": "v2_pub_snacks",
+        "name": "Pub Snacks",
+        "questions": [
+            "by how perfectly they pair with a pint",
+            "by crunch satisfaction",
+            "by pure flavour"
+        ],
+        "options": [
+            "Pork Scratchings",
+            "Dry Roasted Peanuts",
+            "Salt & Vinegar Crisps",
+            "Cheese & Onion Crisps",
+            "Scampi Fries",
+            "Bacon Fries",
+            "Pistachios",
+            "Cashew Nuts",
+            "Mini Cheddars",
+            "Twiglets"
+        ],
+        "tags": ["v2", "food", "snacks", "british"]
+    }
+]

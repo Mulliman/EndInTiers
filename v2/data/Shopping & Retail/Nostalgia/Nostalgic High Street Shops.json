@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_nostalgic_high_street_shops",
+        "name": "Nostalgic High Street Shops",
+        "questions": [
+            "by nostalgic value",
+            "by how much we want them back",
+            "by overall iconic status"
+        ],
+        "options": [
+            "Woolworths", "BHS", "Blockbuster", "Toys R Us", "Comet",
+            "C&A", "Our Price", "Athena", "Index", "Netto"
+        ],
+        "tags": ["v2", "shopping", "retail", "nostalgia", "uk"]
+    }
+]
