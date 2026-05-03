@@ -1,0 +1,24 @@
+[
+    {
+        "id": "v2_life_british_habits",
+        "name": "Classic British Habits & Stereotypes",
+        "questions": [
+            "by how accurate you find them",
+            "by how endearing they are",
+            "by how often you do them yourself"
+        ],
+        "options": [
+            "Talking about the weather",
+            "Apologising to inanimate objects",
+            "Strict adherence to queueing",
+            "Offering tea as a solution to all problems",
+            "Saying 'right' before standing up",
+            "Passive-aggressive politeness",
+            "Sunbathing at 15°C",
+            "Saying 'sorry' when someone bumps into you",
+            "Complaining about train delays",
+            "Having a 'designated drawer' for bags and random cables"
+        ],
+        "tags": ["v2", "life", "culture", "british", "habits"]
+    }
+]

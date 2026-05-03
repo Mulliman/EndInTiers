@@ -1,16 +1,24 @@
 [
     {
-        "id": "v2_uk_sporting_events",
-        "name": "UK Sporting Events",
+        "id": "v2_sports_uk_events",
+        "name": "Major UK Sporting Events",
         "questions": [
-            "by excitement and prestige",
-            "by how much you want to attend",
-            "by the atmosphere of the event"
+            "by how much you look forward to watching them",
+            "by their prestige and history",
+            "by the atmosphere they create"
         ],
         "options": [
-            "Wimbledon", "FA Cup Final", "The Grand National", "Silverstone Grand Prix", "The Ashes",
-            "Six Nations", "The Open Championship", "London Marathon", "Boat Race", "Cheltenham Festival"
+            "Wimbledon (Tennis)",
+            "FA Cup Final (Football)",
+            "The Ashes (Cricket)",
+            "Six Nations (Rugby)",
+            "The Grand National (Horse Racing)",
+            "The Open Championship (Golf)",
+            "Silverstone Grand Prix (F1)",
+            "London Marathon",
+            "Oxford vs Cambridge Boat Race",
+            "World Snooker Championship (Crucible)"
         ],
-        "tags": ["v2", "sports", "uk", "events", "prestige"]
+        "tags": ["v2", "sports", "events", "uk"]
     }
 ]

@@ -1,15 +1,23 @@
 [
     {
-        "id": "v2_uk_reality_shows",
-        "name": "UK Reality Shows",
+        "id": "v2_tv_reality_shows_uk",
+        "name": "UK Reality & Talent Shows",
         "questions": [
-            "by pure entertainment value",
-            "by how addictive they are to watch",
-            "by the quality of the drama"
+            "by entertainment value",
+            "by how likely you are to watch a new season",
+            "by how much you enjoy discussing it with others"
         ],
         "options": [
-            "I'm a Celebrity... Get Me Out of Here!", "Love Island", "The Great British Bake Off", "Strictly Come Dancing", "The Traitors",
-            "Taskmaster", "Gogglebox", "First Dates", "Come Dine With Me", "The Apprentice"
+            "The Great British Bake Off",
+            "Taskmaster",
+            "I'm a Celebrity... Get Me Out of Here!",
+            "Strictly Come Dancing",
+            "Gogglebox",
+            "The Traitors",
+            "Love Island",
+            "MasterChef",
+            "The Apprentice",
+            "First Dates"
         ],
         "tags": ["v2", "tv", "entertainment", "reality", "uk"]
     }

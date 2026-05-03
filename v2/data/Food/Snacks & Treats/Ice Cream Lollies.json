@@ -1,16 +1,24 @@
 [
     {
-        "id": "v2_ice_cream_lollies",
-        "name": "Ice Cream Lollies",
+        "id": "v2_food_ice_cream_lollies",
+        "name": "Classic Ice Creams & Lollies",
         "questions": [
-            "by taste and overall enjoyment",
-            "by how refreshing they are on a hot day",
-            "by nostalgic value"
+            "by how much you enjoy eating them on a hot day",
+            "by taste and flavour",
+            "by nostalgia factor"
         ],
         "options": [
-            "Magnum", "Twister", "Calippo", "Feast", "Fab",
-            "Cornetto", "Mini Milk", "Solero", "Nobbly Bobbly", "Fruit Pastille Lolly"
+            "Twister",
+            "Fab",
+            "Cornetto",
+            "Magnum",
+            "Mini Milk",
+            "Calippo",
+            "Solero",
+            "Feast",
+            "Viennetta",
+            "Fruit Pastille Lolly"
         ],
-        "tags": ["v2", "food", "snacks", "ice cream", "summer"]
+        "tags": ["v2", "food", "snacks", "treats", "uk"]
     }
 ]

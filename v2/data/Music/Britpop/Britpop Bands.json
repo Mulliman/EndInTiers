@@ -1,0 +1,24 @@
+[
+    {
+        "id": "v2_music_britpop_bands",
+        "name": "Britpop Bands",
+        "questions": [
+            "by how much you enjoy their music",
+            "by their cultural impact",
+            "by how many of their songs you know by heart"
+        ],
+        "options": [
+            "Oasis",
+            "Blur",
+            "Pulp",
+            "Suede",
+            "Supergrass",
+            "The Verve",
+            "Elastica",
+            "Cast",
+            "Ocean Colour Scene",
+            "Sleeper"
+        ],
+        "tags": ["v2", "music", "britpop", "uk"]
+    }
+]

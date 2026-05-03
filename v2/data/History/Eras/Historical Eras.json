@@ -1,0 +1,24 @@
+[
+    {
+        "id": "v2_history_eras",
+        "name": "Historical Eras",
+        "questions": [
+            "by how fascinating the history is",
+            "by which era you'd most want to visit in a time machine",
+            "by the art and culture produced"
+        ],
+        "options": [
+            "The Roman Empire",
+            "Ancient Egypt",
+            "The Victorian Era",
+            "The Renaissance",
+            "The Tudor Period",
+            "The Roaring Twenties",
+            "The Industrial Revolution",
+            "The Middle Ages",
+            "The Cold War Era",
+            "Ancient Greece"
+        ],
+        "tags": ["v2", "history", "eras", "global"]
+    }
+]
