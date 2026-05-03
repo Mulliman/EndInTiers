@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_british_sunday_activities",
+        "name": "British Sunday Activities",
+        "questions": [
+            "by sheer relaxation",
+            "by how essential they are for a good weekend",
+            "by level of coziness"
+        ],
+        "options": [
+            "Cooking a Sunday Roast", "Going for a Pub Lunch", "Reading the Sunday Papers", "Watching a Classic Film", "Going for a Walk",
+            "Having a Lie-in", "Washing the Car", "Doing the Weekly Shop", "Watching Football", "Listening to the Chart Show"
+        ],
+        "tags": ["v2", "life", "everyday life", "sunday", "british", "activities"]
+    }
+]

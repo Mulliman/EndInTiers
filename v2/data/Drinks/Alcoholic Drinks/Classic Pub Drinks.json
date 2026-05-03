@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_classic_pub_drinks",
+        "name": "Classic Pub Drinks",
+        "questions": [
+            "by sheer refreshment",
+            "by suitability for a beer garden",
+            "by timeless appeal"
+        ],
+        "options": [
+            "Pint of Lager", "Pint of Ale", "Pint of Cider", "Guinness", "Gin and Tonic",
+            "Vodka Lime and Soda", "Rum and Coke", "Shandy", "Glass of Wine", "Pimm's"
+        ],
+        "tags": ["v2", "drinks", "alcoholic", "pub", "british"]
+    }
+]
