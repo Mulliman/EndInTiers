@@ -1,0 +1,17 @@
+[
+    {
+        "id": "v2_uk_supermarkets",
+        "name": "UK Supermarkets",
+        "questions": [
+            "by overall quality",
+            "by value for money",
+            "by bakery section",
+            "by lunch meal deal"
+        ],
+        "options": [
+            "Tesco", "Sainsbury's", "Asda", "Morrisons", "Aldi",
+            "Lidl", "Waitrose", "Marks & Spencer", "Co-op", "Iceland"
+        ],
+        "tags": ["v2", "shopping", "retail", "supermarkets", "uk"]
+    }
+]

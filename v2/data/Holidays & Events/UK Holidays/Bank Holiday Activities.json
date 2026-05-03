@@ -1,0 +1,16 @@
+[
+    {
+        "id": "v2_bank_holiday_activities",
+        "name": "Bank Holiday Activities",
+        "questions": [
+            "by sheer relaxation level",
+            "by overall fun factor",
+            "by how culturally essential they are"
+        ],
+        "options": [
+            "DIY / Home Improvement", "Visiting a Garden Centre", "Going to the Pub", "Having a BBQ", "Trip to the Seaside",
+            "Binge-watching TV", "Going for a Long Walk", "Doing Absolutely Nothing", "Having a Roast Dinner", "Visiting Family"
+        ],
+        "tags": ["v2", "holidays", "events", "bank holiday", "british", "activities"]
+    }
+]
