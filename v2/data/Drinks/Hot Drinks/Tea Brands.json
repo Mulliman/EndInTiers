@@ -1,0 +1,24 @@
+[
+    {
+        "id": "v2_tea_brands",
+        "name": "Tea Brands",
+        "questions": [
+            "by quality of the brew",
+            "by comforting taste",
+            "by reliability"
+        ],
+        "options": [
+            "Yorkshire Tea",
+            "PG Tips",
+            "Tetley",
+            "Twinings",
+            "Typhoo",
+            "Clipper",
+            "Lipton",
+            "Scottish Blend",
+            "Barry's Tea",
+            "Punjana"
+        ],
+        "tags": ["v2", "drinks", "tea", "brands"]
+    }
+]

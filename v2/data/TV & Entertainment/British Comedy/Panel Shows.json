@@ -1,0 +1,24 @@
+[
+    {
+        "id": "v2_panel_shows",
+        "name": "Panel Shows",
+        "questions": [
+            "by entertainment value",
+            "by how funny the regular cast is",
+            "by rewatchability"
+        ],
+        "options": [
+            "Taskmaster",
+            "Would I Lie to You?",
+            "8 Out of 10 Cats Does Countdown",
+            "QI",
+            "Have I Got News for You",
+            "Mock the Week",
+            "Never Mind the Buzzcocks",
+            "A League of Their Own",
+            "Shooting Stars",
+            "Big Fat Quiz of the Year"
+        ],
+        "tags": ["v2", "tv", "comedy", "british"]
+    }
+]

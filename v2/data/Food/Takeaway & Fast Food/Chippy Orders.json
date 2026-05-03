@@ -1,0 +1,24 @@
+[
+    {
+        "id": "v2_chippy_orders",
+        "name": "Chippy Orders",
+        "questions": [
+            "by pure deliciousness",
+            "by how essential they are to a chippy tea",
+            "by comfort food factor"
+        ],
+        "options": [
+            "Battered Cod",
+            "Battered Haddock",
+            "Large Chips",
+            "Mushy Peas",
+            "Curry Sauce",
+            "Battered Sausage",
+            "Saveloy",
+            "Scraps",
+            "Steak and Kidney Pie",
+            "Pickled Onion"
+        ],
+        "tags": ["v2", "food", "fastfood", "british"]
+    }
+]
