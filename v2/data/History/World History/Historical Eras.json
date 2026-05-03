@@ -1,0 +1,29 @@
+[
+    {
+        "id": "v2_historical_eras",
+        "name": "Historical Eras",
+        "questions": [
+            "by cultural fascination",
+            "by how much you'd like to visit",
+            "by the impact of their inventions"
+        ],
+        "options": [
+            "Tudor England",
+            "Victorian Era",
+            "Ancient Rome",
+            "Ancient Egypt",
+            "The Renaissance",
+            "The Roaring Twenties",
+            "The Industrial Revolution",
+            "Ancient Greece",
+            "The Vikings",
+            "The Swinging Sixties"
+        ],
+        "tags": [
+            "v2",
+            "history",
+            "world",
+            "eras"
+        ]
+    }
+]

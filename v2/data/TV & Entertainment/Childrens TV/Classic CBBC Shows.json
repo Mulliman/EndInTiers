@@ -1,0 +1,30 @@
+[
+    {
+        "id": "v2_classic_cbbc_shows",
+        "name": "Classic CBBC Shows",
+        "questions": [
+            "by nostalgia factor",
+            "by how much you loved them as a kid",
+            "by the quality of the theme tune"
+        ],
+        "options": [
+            "ChuckleVision",
+            "Tracy Beaker",
+            "Blue Peter",
+            "Dick and Dom in da Bungalow",
+            "SMTV Live",
+            "Raven",
+            "Byker Grove",
+            "Newsround",
+            "Arthur",
+            "Horrible Histories"
+        ],
+        "tags": [
+            "v2",
+            "tv",
+            "entertainment",
+            "childrens",
+            "uk"
+        ]
+    }
+]

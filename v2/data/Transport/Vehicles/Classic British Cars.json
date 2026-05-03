@@ -1,0 +1,30 @@
+[
+    {
+        "id": "v2_classic_british_cars",
+        "name": "Classic British Cars",
+        "questions": [
+            "by iconic design",
+            "by how much you'd want to drive one",
+            "by cultural significance"
+        ],
+        "options": [
+            "Mini Cooper",
+            "Aston Martin DB5",
+            "Jaguar E-Type",
+            "Land Rover Defender",
+            "Morris Minor",
+            "Rolls-Royce Phantom",
+            "MGB Roadster",
+            "Lotus Esprit",
+            "Reliant Robin",
+            "Ford Cortina"
+        ],
+        "tags": [
+            "v2",
+            "transport",
+            "vehicles",
+            "cars",
+            "british"
+        ]
+    }
+]

@@ -1,0 +1,29 @@
+[
+    {
+        "id": "v2_british_monarchs",
+        "name": "British Monarchs",
+        "questions": [
+            "by historical impact",
+            "by how memorable they are",
+            "by how interesting their era was"
+        ],
+        "options": [
+            "Queen Victoria",
+            "Henry VIII",
+            "Elizabeth I",
+            "Elizabeth II",
+            "George III",
+            "Richard III",
+            "William the Conqueror",
+            "Charles II",
+            "Mary Queen of Scots",
+            "King John"
+        ],
+        "tags": [
+            "v2",
+            "history",
+            "british",
+            "monarchs"
+        ]
+    }
+]
